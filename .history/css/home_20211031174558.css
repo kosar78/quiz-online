@@ -1,0 +1,42 @@
+@font-face {
+    font-family: FirstFont;
+    src:url(../font/Vazir-Medium.woff2) format('woff2');
+    src:url(../font/Vazir-Medium-FD-WOL.woff2) format('woff2');
+  }
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    text-align: right;
+    text-decoration:none;
+}
+html body {
+    direction: rtl;
+    font-family:FirstFont;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.container1{
+    background: linear-gradient(260.06deg, #363671 12.33%, #3E5196 57.46%);
+    padding: 25px 50px !important;
+}
+.header-menu{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+.header-menu ul{
+    margin-bottom: 0 !important;
+}
+.header-menu ul li{
+    margin-left: 35px;
+    color: #363671;
+}
