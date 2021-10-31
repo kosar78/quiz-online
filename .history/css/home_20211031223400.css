@@ -154,9 +154,8 @@ ul li{
 }
 .main-text3{
     padding-top: 160px;
-    /* margin-right: 50px; */
+    margin-right: 50px;
 }
-
 .container3{
     background: rgba(62, 81, 150, 0.1);
 }
@@ -191,15 +190,6 @@ ul li{
     font-weight: bold;
 }
 .menubar{
-    display: none;
-}
-.menu-hidden{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100vh;
-    background-color: #363671;
     display: none;
 }
 @media(max-width:1199px){
@@ -276,9 +266,6 @@ ul li{
         text-align: center;
         margin-bottom: 25px;
     }
-    .main-text2 .main-tx1{
-        margin-top: 15px;
-    }
     .main-text2,
     .main-text3,
     .main-text2 p,
@@ -303,16 +290,6 @@ ul li{
     }
     .header-menu{
         width: max-content;
-        padding: 15px;
-    }
-    .main-pic-text{
-        padding-top: 0px;
-    }
-}
-@media(max-width:450px){
-    .container2 p{
-        padding-left: 0px !important;
-        padding-right: 0px !important;
     }
 }
 @media(min-width:1200px){
@@ -321,13 +298,3 @@ ul li{
     }
     
 }
-@media(min-width:790px){
-    .main-text3 p{
-        padding-right: 50px;
-    }
-    .main-text3 input{
-        margin-right: 50px;
-    }
-}
-
-

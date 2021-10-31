@@ -199,8 +199,7 @@ ul li{
     right: 0px;
     width: 100%;
     height: 100vh;
-    background-color: #363671;
-    display: none;
+    background-color: #EEBB99;
 }
 @media(max-width:1199px){
     .semicircle{
