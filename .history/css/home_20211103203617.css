@@ -224,8 +224,6 @@ ul li{
     left: 15px;
     position: absolute;
     cursor: pointer;
-    width: 45px;
-    height: 45px;
 }
 .menu-hidden .signin-btn,
 .menu-hidden .signup-btn{

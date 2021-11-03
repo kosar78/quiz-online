@@ -198,34 +198,26 @@ ul li{
     height: 100vh;
     background-color: #363671;
     text-align: center;
-    display: none;
-}
-.menu-hidden .col-xl-12 div{
-    text-align: center;
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+    /* display: none; */
 }
 .menu-hidden .col-xl-12{
     margin-top: 100px;
 }
 .menu-hidden a{
-    
+    display: block;
     text-align: center;
-    width: max-content;
+    width: 100%;
     text-decoration: none !important;
     outline: none !important;
     color: #fff !important;
     font-size: 18px;
-    
+    margin-bottom: 20px;
 }
 .close{
     top: 15px;
     left: 15px;
     position: absolute;
     cursor: pointer;
-    width: 45px;
-    height: 45px;
 }
 .menu-hidden .signin-btn,
 .menu-hidden .signup-btn{
@@ -233,18 +225,11 @@ ul li{
     border-radius: 25px;
     border: 0;
     outline: none;
-    width: 130px;
-    height: 30px;
+    width: 150px;
+    height: 35px;
     text-align: center;
     color: #fff;
-    
-}
-.menu-hiden-btn1{
-    margin-top: 45px;
-    margin-bottom: 0px !important;
-}
-.menu-hiden-btn2{
-    margin-top: 15px !important;
+    margin-top: 20px;
 }
 .main-pic-text2{
     text-align: center;

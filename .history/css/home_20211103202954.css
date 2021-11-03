@@ -198,7 +198,7 @@ ul li{
     height: 100vh;
     background-color: #363671;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 .menu-hidden .col-xl-12 div{
     text-align: center;
@@ -207,7 +207,8 @@ ul li{
     margin-bottom: 20px;
 }
 .menu-hidden .col-xl-12{
-    margin-top: 100px;
+    margin-top: 20%;
+    /* text-align: center; */
 }
 .menu-hidden a{
     
@@ -224,8 +225,6 @@ ul li{
     left: 15px;
     position: absolute;
     cursor: pointer;
-    width: 45px;
-    height: 45px;
 }
 .menu-hidden .signin-btn,
 .menu-hidden .signup-btn{
@@ -238,13 +237,6 @@ ul li{
     text-align: center;
     color: #fff;
     
-}
-.menu-hiden-btn1{
-    margin-top: 45px;
-    margin-bottom: 0px !important;
-}
-.menu-hiden-btn2{
-    margin-top: 15px !important;
 }
 .main-pic-text2{
     text-align: center;

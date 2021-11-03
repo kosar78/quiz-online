@@ -198,7 +198,7 @@ ul li{
     height: 100vh;
     background-color: #363671;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 .menu-hidden .col-xl-12 div{
     text-align: center;
@@ -224,8 +224,6 @@ ul li{
     left: 15px;
     position: absolute;
     cursor: pointer;
-    width: 45px;
-    height: 45px;
 }
 .menu-hidden .signin-btn,
 .menu-hidden .signup-btn{
