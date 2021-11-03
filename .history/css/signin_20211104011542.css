@@ -47,7 +47,7 @@ ul li{
     padding: 10px 0;
     
 }
-#password{
+.signin-form input[type="password"]{
     padding-left: 22px !important;
 }
 .signin-form img{

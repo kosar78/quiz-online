@@ -45,11 +45,9 @@ ul li{
     border: 0;
     outline: none;
     padding: 10px 0;
-    
-}
-#password{
     padding-left: 22px !important;
 }
+
 .signin-form img{
     width: 20px;
     height: 20px;

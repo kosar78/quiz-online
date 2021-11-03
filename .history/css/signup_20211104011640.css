@@ -27,7 +27,7 @@ ul li{
     display: inline-block;
     list-style: none;
 }
-.signin-form{
+.signup-form{
     background: #FFFFFF;
     box-shadow: 0px 0px 35px 25px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -36,8 +36,8 @@ ul li{
     width: 100%;
     padding: 40px 25px !important;
 }
-.signin-form input[type="text"],
-.signin-form input[type="password"]{
+.signup-form input[type="text"],
+.signup-form input[type="password"]{
     font-size: 15px;
     border-bottom-color: rgb(0, 0, 0,.5) !important;
     border-bottom-style: solid !important;
@@ -47,28 +47,34 @@ ul li{
     padding: 10px 0;
     
 }
-#password{
+.signin-form #password{
     padding-left: 22px !important;
 }
-.signin-form img{
+.signup-form img{
     width: 20px;
     height: 20px;
     margin-left: 10px;
     margin-top: 15px;
     opacity: .8;
 }
-.signin-form .row{
+.signup-form .row{
     margin-bottom: 25px;
 }
+#uni-name,
 #username,
-#password{
+#phone{
     width: 94%;
 }
-
-.signin-btn-row{
+#user-fName,
+#user-lName,
+#password,
+#comfirm-password{
+    width: 87.5%;
+}
+.signup-btn-row{
     text-align: left;
 }
-#btn-signin{
+#btn-signup{
     background: #EE537C;
     box-shadow: 0px 0px 18px #EE537C;
     border-radius: 25px;
@@ -79,15 +85,25 @@ ul li{
     text-align: center;
     color: #fff;
 }
-
+#btn-cancel{
+    background: #eb927b;
+    box-shadow: 0px 0px 18px #eb927b;
+    border-radius: 25px;
+    width: 150px;
+    height: 45px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
 .btns{
     margin-top: 60px;
 }
-.forget-pass{
+.have-acount{
     width: 100%;
     text-align: center;
 }
-.forget-pass a{
+.have-acount a{
     text-decoration: none !important;
     outline: none !important;
     color: #363671 !important;
@@ -95,8 +111,10 @@ ul li{
     font-weight: bold;
 
 }
-.show-pass,
-.hide-pass{
+.show-pass1,
+.hide-pass1,
+.show-pass2,
+.hide-pass2{
     width: 25px;
     width: 25px;
     position: absolute;
@@ -106,7 +124,8 @@ ul li{
     opacity: 1 !important;
     z-index: 1;
 }
-.hide-pass{
+.hide-pass1,
+.hide-pass2{
     display: none;
 }
 ::placeholder {
@@ -126,71 +145,114 @@ input[type="text"]:focus,
 input[type="password"]:focus{
     border-bottom-color:#EE537C !important;
 }
-.row1{
-    margin-top: 40px;
-}
 @media(max-width:1259px){
-   
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password{
+        width: 86.5%;
+    }
+    #uni-name,
+    #username,
+    #phone{
         width: 93%;
     }
 }
 @media(max-width:1199px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 95%;
     }
-    
-    .signin-form .row{
-        margin-bottom:25px;
+    #comfirm-password,
+    #user-lName{
+        margin-top:15px;
     }
-    
+    .signup-form .row{
+        margin-bottom:15px;
+    }
+    .show-pass2,
+    .hide-pass2{
+        top: 15px;
+    }
     .btns .col-xl-6{
         text-align: center !important;
     }
-    
+    .signup-btn-row{
+        margin-bottom: 15px;
+    }
     .btns input{
-        width: 40% !important;
+        width: 50% !important;
     }
 }
 
 @media(max-width:1199px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 92%;
     }
     
 }
 @media(max-width:575px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 90%;
     }
-    .signin-container{
+    .signup-container{
         padding: 30px 50px !important;
     }
 }
 @media(max-width:463px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 88%;
     }
-    .signin-container{
+    .signup-container{
         padding: 20px 35px !important;
     }
-    
+    .btns input{
+        width: 60% !important;
+    }
 }
 @media(max-width:376px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 86%;
     }
     
 }
 @media(max-width:335px){
+    #user-fName,
+    #user-lName,
     #password,
-    #username{
+    #comfirm-password,
+    #uni-name,
+    #username,
+    #phone{
         width: 84%;
     }
     
