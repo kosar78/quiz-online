@@ -123,9 +123,6 @@ input[type="text"]:focus,
 input[type="password"]:focus{
     border-bottom-color:#EE537C !important;
 }
-.row1{
-    margin-top: 40px;
-}
 @media(max-width:1259px){
    
     #password,
@@ -140,7 +137,7 @@ input[type="password"]:focus{
     }
     
     .signin-form .row{
-        margin-bottom:25px;
+        margin-bottom:15px;
     }
     
     .btns .col-xl-6{
