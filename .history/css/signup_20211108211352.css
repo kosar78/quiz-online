@@ -158,7 +158,7 @@ input[type="password"]:focus{
 .vector{
     padding-top: 60px;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .vector img{
     width: 120%;
@@ -219,10 +219,7 @@ input[type="password"]:focus{
 }
 @media(min-width:1200px){
     .signup-container .main-row{
-        padding:0 30px;
-    }
-    body{
-        overflow-y: hidden;
+        padding:0 20px;
     }
 }
 @media(max-width:1199px){

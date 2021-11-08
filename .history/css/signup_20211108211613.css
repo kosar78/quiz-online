@@ -219,7 +219,7 @@ input[type="password"]:focus{
 }
 @media(min-width:1200px){
     .signup-container .main-row{
-        padding:0 30px;
+        padding:0 20px;
     }
     body{
         overflow-y: hidden;

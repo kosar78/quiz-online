@@ -34,7 +34,6 @@ ul li{
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
-    height: max-content;
     padding: 40px 25px !important;
 }
 .signup-form input[type="text"],
@@ -92,8 +91,8 @@ ul li{
     color:#f6f6f6;
 }
 #btn-cancel{
-    background: #fab23c;
-    box-shadow: 0px 0px 7px #fab23c;
+    background: #eb927b;
+    box-shadow: 0px 0px 7px #eb927b;
     border-radius: 25px;
     width: 150px;
     height: 45px;
@@ -103,7 +102,7 @@ ul li{
     color: #fff;
 }
 #btn-cancel:hover{
-    background:#dc9c33;
+    background:#e28c76;
     color:#f6f6f6;
 }
 .btns{
@@ -155,27 +154,16 @@ input[type="text"]:focus,
 input[type="password"]:focus{
     border-bottom-color:#EE537C !important;
 }
-.vector{
-    padding-top: 60px;
-    text-align: center;
-    overflow: hidden;
-}
-.vector img{
-    width: 120%;
-}
+
 @media(min-width:1300px){
     .signup-container .main-row{
         padding:0 4% !important;
     }
-    
 }
 @media(min-width:1400px){
     .signup-container .main-row{
         padding:0 6% !important;
         padding-top:2% !important;
-    }
-    .vector img{
-        width: 115%;
     }
 }
 @media(min-width:1600px){
@@ -183,46 +171,22 @@ input[type="password"]:focus{
         padding:0 8% !important;
         padding-top:3% !important;
     }
-    .vector img{
-        width: 110%;
-    }
 }
 @media(min-width:1700px){
     .signup-container .main-row{
         padding:0 9% !important;
         padding-top:4% !important;
     }
-    .vector img{
-        width: 105%;
-    }
 }
 @media(min-width:1800px){
     .signup-container .main-row{
-        padding:0 12% !important;
-        padding-top:5% !important;
-    }
-    .vector img{
-        width: 100%;
-    }
-}
-@media(min-width:2000px){
-    .signup-container .main-row{
-        padding:0 15% !important;
-        padding-top:7% !important;
-    }
-}
-@media(min-width:2200px){
-    .vector{
-        padding-top:0;
-        
+        padding:0 10% !important;
+        padding-top:6% !important;
     }
 }
 @media(min-width:1200px){
     .signup-container .main-row{
-        padding:0 30px;
-    }
-    body{
-        overflow-y: hidden;
+        padding:0 20px;
     }
 }
 @media(max-width:1199px){
@@ -257,9 +221,6 @@ input[type="password"]:focus{
     }
     .signup-container .row{
         justify-content: center;
-    }
-    .vector{
-        display: none;
     }
 }
 

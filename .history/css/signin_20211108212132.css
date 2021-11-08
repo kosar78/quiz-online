@@ -27,18 +27,17 @@ ul li{
     display: inline-block;
     list-style: none;
 }
-.signup-form{
+.signin-form{
     background: #FFFFFF;
     box-shadow: 0px 0px 35px 25px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
-    height: max-content;
     padding: 40px 25px !important;
 }
-.signup-form input[type="text"],
-.signup-form input[type="password"]{
+.signin-form input[type="text"],
+.signin-form input[type="password"]{
     font-size: 15px;
     border-bottom-color: rgb(0, 0, 0,.5) !important;
     border-bottom-style: solid !important;
@@ -48,35 +47,28 @@ ul li{
     padding: 10px 0;
     
 }
-#password,
-#comfirm-password{
+#password{
     padding-left: 22px !important;
 }
-.signup-form img{
+.signin-form img{
     width: 20px;
     height: 20px;
     margin-left: 10px;
     margin-top: 15px;
     opacity: .8;
 }
-.signup-form .row{
+.signin-form .row{
     margin-bottom: 25px;
 }
-#uni-name,
 #username,
-#phone{
-    width: 93%;
+#password{
+    width: 94%;
 }
-#user-fName,
-#user-lName,
-#password,
-#comfirm-password{
-    width: 85.5%;
-}
-.signup-btn-row{
+
+.signin-btn-row{
     text-align: left;
 }
-#btn-signup{
+#btn-signin{
     background: #EE537C;
     box-shadow: 0px 0px 7px #EE537C;
     border-radius: 25px;
@@ -87,33 +79,18 @@ ul li{
     text-align: center;
     color: #fff;
 }
-#btn-signup:hover{
+#btn-signin:hover{
     background:#d84c71;
-    color:#f6f6f6;
-}
-#btn-cancel{
-    background: #fab23c;
-    box-shadow: 0px 0px 7px #fab23c;
-    border-radius: 25px;
-    width: 150px;
-    height: 45px;
-    border: 0;
-    outline: none;
-    text-align: center;
-    color: #fff;
-}
-#btn-cancel:hover{
-    background:#dc9c33;
     color:#f6f6f6;
 }
 .btns{
     margin-top: 60px;
 }
-.have-acount{
+.forget-pass{
     width: 100%;
     text-align: center;
 }
-.have-acount a{
+.forget-pass a{
     text-decoration: none !important;
     outline: none !important;
     color: #363671 !important;
@@ -121,10 +98,8 @@ ul li{
     font-weight: bold;
 
 }
-.show-pass1,
-.hide-pass1,
-.show-pass2,
-.hide-pass2{
+.show-pass,
+.hide-pass{
     width: 25px;
     width: 25px;
     position: absolute;
@@ -134,8 +109,7 @@ ul li{
     opacity: 1 !important;
     z-index: 1;
 }
-.hide-pass1,
-.hide-pass2{
+.hide-pass{
     display: none;
 }
 ::placeholder {
@@ -155,6 +129,11 @@ input[type="text"]:focus,
 input[type="password"]:focus{
     border-bottom-color:#EE537C !important;
 }
+.row1{
+    margin-top: 40px;
+}
+
+
 .vector{
     padding-top: 60px;
     text-align: center;
@@ -164,13 +143,13 @@ input[type="password"]:focus{
     width: 120%;
 }
 @media(min-width:1300px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 4% !important;
     }
     
 }
 @media(min-width:1400px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 6% !important;
         padding-top:2% !important;
     }
@@ -179,7 +158,7 @@ input[type="password"]:focus{
     }
 }
 @media(min-width:1600px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 8% !important;
         padding-top:3% !important;
     }
@@ -188,7 +167,7 @@ input[type="password"]:focus{
     }
 }
 @media(min-width:1700px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 9% !important;
         padding-top:4% !important;
     }
@@ -197,7 +176,7 @@ input[type="password"]:focus{
     }
 }
 @media(min-width:1800px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 12% !important;
         padding-top:5% !important;
     }
@@ -206,7 +185,7 @@ input[type="password"]:focus{
     }
 }
 @media(min-width:2000px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 15% !important;
         padding-top:7% !important;
     }
@@ -218,44 +197,39 @@ input[type="password"]:focus{
     }
 }
 @media(min-width:1200px){
-    .signup-container .main-row{
+    .signin-container .main-row{
         padding:0 30px;
     }
     body{
         overflow-y: hidden;
     }
 }
-@media(max-width:1199px){
-    #user-fName,
-    #user-lName,
+
+@media(max-width:1259px){
+   
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
+        width: 93%;
+    }
+}
+@media(max-width:1199px){
+    #password,
+    #username{
         width: 95%;
     }
-    #comfirm-password,
-    #user-lName{
-        margin-top:15px;
+    
+    .signin-form .row{
+        margin-bottom:25px;
     }
-    .signup-form .row{
-        margin-bottom:15px;
-    }
-    .show-pass2,
-    .hide-pass2{
-        top: 15px;
-    }
+    
     .btns .col-xl-6{
         text-align: center !important;
     }
-    .signup-btn-row{
-        margin-bottom: 15px;
-    }
+    
     .btns input{
-        width: 50% !important;
+        width: 40% !important;
     }
-    .signup-container .row{
+    .signin-container .main-row{
         justify-content: center;
     }
     .vector{
@@ -264,68 +238,41 @@ input[type="password"]:focus{
 }
 
 @media(max-width:1199px){
-    #user-fName,
-    #user-lName,
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
         width: 92%;
     }
     
 }
 @media(max-width:575px){
-    #user-fName,
-    #user-lName,
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
         width: 90%;
     }
-    .signup-container{
+    .signin-container{
         padding: 30px 50px !important;
     }
 }
 @media(max-width:463px){
-    #user-fName,
-    #user-lName,
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
         width: 88%;
     }
-    .signup-container{
+    .signin-container{
         padding: 20px 35px !important;
     }
-    .btns input{
-        width: 60% !important;
-    }
+    
 }
 @media(max-width:376px){
-    #user-fName,
-    #user-lName,
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
         width: 86%;
     }
     
 }
 @media(max-width:335px){
-    #user-fName,
-    #user-lName,
     #password,
-    #comfirm-password,
-    #uni-name,
-    #username,
-    #phone{
+    #username{
         width: 84%;
     }
     
