@@ -202,7 +202,7 @@ ul li{
 }
 .small-sidebar .manage-profile-menubar {
     left: 29px;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 .small-sidebar .user-management-cases {
     padding-right: 25px;
@@ -218,28 +218,9 @@ ul li{
     .manage-profile-menubar {
         margin-top: -55px;
     }
-    
-}
-.small-sidebar .user-profile,
-.small-sidebar .sidebar-case,
-.small-sidebar .user-management-cases {
-    padding-right: 0px;
-    text-align: center;
-}
-.small-sidebar .user-management-cases .user-management-case{
-    text-align: center;
-}
-
-.small-sidebar .manage-profile {
-    left: 42%;
-    margin-top: 36px;
-}
-.small-sidebar .manage-profile-menubar {
-    left: 35%;
 }
 @media(max-width:880px){
-    .user-name-phone .user-name,
-    .user-management-case .umc-name{
+    .user-name-phone .user-name{
         font-size: 13px;
     }
     .case-name{
@@ -261,24 +242,9 @@ ul li{
     .user-management-cases {
         padding-right: 50px;
     }
-    .small-sidebar .manage-profile-menubar {
-        left: 38%;
-    }
 }
-@media(max-width:767px){
-    .sidebar-parent{
-        display: none;
-    }
-    .menubar{
-        display: block;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-    .main-row{
-        padding-right: 0;
-    }
+@media(min-width:1200px){
+
 }
 @media(min-width:1200px){
 

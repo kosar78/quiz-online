@@ -51,7 +51,7 @@ $(document).ready(function(){
             $(".left-side").removeClass("col-xl-9")
             $(".left-side").addClass("col-xl-11")
             $(".left-side").removeClass("col-md-9")
-            $(".left-side").addClass("col-md-10")
+            $(".left-side").addClass("col-md-11")
             $(".sidebar-parent").addClass("small-sidebar")
         }
         else if($(".resize-right").hasClass("hide")){
@@ -62,11 +62,11 @@ $(document).ready(function(){
             $(".sidebar-parent").addClass("col-xl-3")
             $(".sidebar-parent").removeClass("col-xl-1")
             $(".sidebar-parent").addClass("col-md-3")
-            $(".sidebar-parent").removeClass("col-md-2")
+            $(".sidebar-parent").removeClass("col-md-1")
             $(".left-side").addClass("col-xl-9")
             $(".left-side").removeClass("col-xl-11")
             $(".left-side").addClass("col-md-9")
-            $(".left-side").removeClass("col-md-10")
+            $(".left-side").removeClass("col-md-11")
             $(".sidebar-parent").removeClass("small-sidebar")
         }
 

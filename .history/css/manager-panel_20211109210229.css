@@ -91,7 +91,7 @@ ul li{
     cursor: pointer;
     position: absolute;
     left: 25px;
-    top: 100px;
+    margin-top: 15px;
 }
 .manage-profile img{
     width: 14px;
@@ -202,7 +202,7 @@ ul li{
 }
 .small-sidebar .manage-profile-menubar {
     left: 29px;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 .small-sidebar .user-management-cases {
     padding-right: 25px;
@@ -211,75 +211,6 @@ ul li{
     display: none;
 }
 
-@media(max-width:1199px){
-    .user-name-phone{
-        display: block;
-    }
-    .manage-profile-menubar {
-        margin-top: -55px;
-    }
-    
-}
-.small-sidebar .user-profile,
-.small-sidebar .sidebar-case,
-.small-sidebar .user-management-cases {
-    padding-right: 0px;
-    text-align: center;
-}
-.small-sidebar .user-management-cases .user-management-case{
-    text-align: center;
-}
-
-.small-sidebar .manage-profile {
-    left: 42%;
-    margin-top: 36px;
-}
-.small-sidebar .manage-profile-menubar {
-    left: 35%;
-}
-@media(max-width:880px){
-    .user-name-phone .user-name,
-    .user-management-case .umc-name{
-        font-size: 13px;
-    }
-    .case-name{
-        font-size: 12px;
-        margin-right: 7px !important;
-    }
-    .user-phone {
-        font-size: 9px;
-    }
-    .sidebar-case {
-        padding-right: 15px;
-    }
-    .manage-profile-menubar .mp-menubar{
-        padding: 10px;
-    }
-    .manage-profile-menubar .mp-name{
-        padding-left: 15px;
-    }
-    .user-management-cases {
-        padding-right: 50px;
-    }
-    .small-sidebar .manage-profile-menubar {
-        left: 38%;
-    }
-}
-@media(max-width:767px){
-    .sidebar-parent{
-        display: none;
-    }
-    .menubar{
-        display: block;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
-    .main-row{
-        padding-right: 0;
-    }
-}
 @media(min-width:1200px){
-
+    
 }

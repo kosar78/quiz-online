@@ -276,9 +276,6 @@ ul li{
         cursor: pointer;
         margin-top: 20px;
     }
-    .main-row{
-        padding-right: 0;
-    }
 }
 @media(min-width:1200px){
 
