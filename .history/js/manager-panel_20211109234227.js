@@ -81,18 +81,8 @@ $(document).ready(function(){
         $(".resize-sidebar").addClass("hide")
         $(".exit-menubar").removeClass("hide")
         $(".exit-menubar").addClass("show")
-        $(".sidebar-parent").removeClass("small-sidebar")
     })
     $(".exit-menubar").click(function(){
-        $(".sidebar-parent").removeClass("show")
-        $(".sidebar-parent").addClass("hide")
-        $(".left-side").addClass("show")
-        $(".left-side").removeClass("hide")
-        $(".sidebar-parent").css("display","none")
-        $(".resize-sidebar").removeClass("hide")
-        $(".resize-sidebar").addClass("show")
-        $(".exit-menubar").removeClass("show")
-        $(".exit-menubar").addClass("hide")
         
     })
 })

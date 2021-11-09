@@ -283,26 +283,11 @@ ul li{
         height: 40px;
         cursor: pointer;
         margin-top: 20px;
-        position: absolute;
-        top: 2px;
-        right: 15px;
     }
     .main-row{
         padding-right: 0;
     }
-    
 }
 @media(min-width:768px){
-    .exit-menubar{
-        display: none;
-    }
-    .resize-sidebar{
-        display: block;
-    }
-    .menubar{
-        display: none;
-    }
-    .sidebar-parent{
-        display: block !important;
-    }
+
 }

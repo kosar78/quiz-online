@@ -81,7 +81,6 @@ $(document).ready(function(){
         $(".resize-sidebar").addClass("hide")
         $(".exit-menubar").removeClass("hide")
         $(".exit-menubar").addClass("show")
-        $(".sidebar-parent").removeClass("small-sidebar")
     })
     $(".exit-menubar").click(function(){
         $(".sidebar-parent").removeClass("show")
@@ -93,6 +92,6 @@ $(document).ready(function(){
         $(".resize-sidebar").addClass("show")
         $(".exit-menubar").removeClass("show")
         $(".exit-menubar").addClass("hide")
-        
+        $(".sidebar-parent").removeClass("small-sidebar")
     })
 })
