@@ -77,7 +77,7 @@ $(document).ready(function(){
         $(".left-side").addClass("hide")
         $(".left-side").removeClass("show")
         $(".sidebar-parent").css("display","block")
-        $(".left-side").css("display","none")
+        $(".left-sidebar").css("display","none")
         $(".resize-sidebar").removeClass("show")
         $(".resize-sidebar").addClass("hide")
         $(".exit-menubar").removeClass("hide")
@@ -94,6 +94,6 @@ $(document).ready(function(){
         $(".resize-sidebar").addClass("show")
         $(".exit-menubar").removeClass("show")
         $(".exit-menubar").addClass("hide")
-        $(".left-side").css("display","flex")
+        
     })
 })

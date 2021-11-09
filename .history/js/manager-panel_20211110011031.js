@@ -94,6 +94,6 @@ $(document).ready(function(){
         $(".resize-sidebar").addClass("show")
         $(".exit-menubar").removeClass("show")
         $(".exit-menubar").addClass("hide")
-        $(".left-side").css("display","flex")
+        $(".left-side").css("display","block")
     })
 })
