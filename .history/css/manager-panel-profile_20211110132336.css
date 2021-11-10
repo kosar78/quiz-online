@@ -94,7 +94,7 @@
     height: 100vh !important;
     overflow-y: auto;
 }
-
+}
 @media(max-width:1199px){
     .profile-left,
     .profile-right{
