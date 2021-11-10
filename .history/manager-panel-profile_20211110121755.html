@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manager-panel.css">
-    <link rel="stylesheet" href="css/manager-panel-change-password.css">
+    <link rel="stylesheet" href="css/manager-panel-profile.css">
     <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
     <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/manager-panel.js"></script>
-    <title>پنل مدیر- تغیر رمز عبور</title>
+    <script type="text/javascript" src="js/manager-panel-profile.js"></script>
+    <title>پنل مدیر- پروفایل</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -107,26 +108,50 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-9 col-md-9 left-side change-pass-left-side">
+            <div class="col-xl-9 col-md-9 left-side">
                 <img src="images/menubar.svg" alt="" class="menubar hide">
 
-                <div class="change-password-form">
-                    <p class="title">
-                        تغییر رمز عبور
-                    </p>
-                    <p class="top-input">
-                        رمز عبور فعلی
-                    </p>
-                    <input type="text" name="password" id="current-password">
-                    <p class="top-input">
-                        رمز عبور جدید
-                    </p>
-                    <input type="text" name="password" id="new-password">
-                    <p class="top-input">
-                        تکرار رمز عبور جدید
-                    </p>
-                    <input type="text" name="password" id="comfirm-new-password">
-                    <input class="save-change-btn" type="button" value="ذخیره">
+                <div class="row">
+                    <div class="col-xl-6 right">
+                        <div class="profile-user-image">
+                            <input type='file' id="imgInp" />
+                                <ul class="user-profile-place">
+                                    <li class="upload-img-icon">
+                                        <img src="images/camera.svg" alt="">
+                                    </li>
+                                    <li><img src="images/Cute-Kids-Baby-Girl-Toddler-SDL005498623-2-ce2cf.JPEG" alt="" class="profile-user-img"></li>
+                                </ul>
+                            <!-- <p class="profile-user-full-name">
+                                کوثر حسینی
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="edit-user-profile-form">
+                           
+                            <p class="top-input">
+                                نام کاربری
+                            </p>
+                            <input type="text" name="username" id="username" value="kosar78">
+                            <p class="top-input">
+                                نام دانشگاه
+                            </p>
+                            <input type="text" name="university-name" id="university-name" value="چمران">
+                            <p class="top-input">
+                                نام
+                            </p>
+                            <input type="text" name="first-name" id="first-name" value="کوثر">
+                            <p class="top-input">
+                                نام خانوادگی
+                            </p>
+                            <input type="text" name="last-name" id="last-name" value="حسینی">
+                            <p class="top-input">
+                                ایمیل
+                            </p>
+                            <input type="text" name="email" id="email" value="kossarhoseini78@gmail.com">
+                            <input class="save-change-btn" type="button" value="ذخیره">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

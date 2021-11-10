@@ -1,0 +1,117 @@
+.profile-user-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #3e5196;
+}
+.upload-img-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3E5196;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+    position: relative;
+    top: 150px;
+    right: -50px;
+}
+.user-profile-place{
+    text-align: center;
+    width: 160px;
+    height: 220px;
+    
+}
+.upload-img-icon img{
+    width: 65%;
+    height: 65%;
+    
+}
+#imgInp{
+    display: none;
+}
+.profile-user-image{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    /* padding: 35px 40px; */
+}
+.main-row-left{
+    padding-top: 50px;
+}
+.profile-right{
+    padding: 0 40px !important;
+}
+.edit-user-profile-form{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 35px 40px;
+}
+.profile-left{
+    padding-left: 30px !important;
+}
+
+.edit-user-profile-form input[type="text"]{
+    border-radius: 25px;
+    width: 100%;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 3px 15px;
+    margin-bottom: 30px;
+}
+.edit-user-profile-form input[type="text"]:focus{
+    border: 1px solid #3E5196;
+}
+.edit-user-profile-form input[type="button"]{
+    width: 100%;
+    outline: none;
+    margin-bottom: 30px;
+    border: 0;
+    text-align: center;
+    color: #FFFFFF;
+    background: #EE537C;
+    border-radius: 25px;
+    height: 40px;
+}
+.save-change-btn:hover{
+    background:#d84c71 !important;
+    color:#f6f6f6 !important;
+}
+.edit-user-profile-form .top-input{
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+@media(max-width:1199px){
+    .profile-left,
+    .profile-right{
+        padding: 15px !important;
+    }
+    
+}
+@media(max-width:425px){
+    .edit-user-profile-form{
+        padding:35px 20px;
+
+    }
+}
+/* @media(min-width:767px){
+    .left-side{
+        display:block !important;
+
+    }
+} */
+@media(max-width:767px){
+    .profile-right{
+        margin-top: 20px;
+    }
+}
