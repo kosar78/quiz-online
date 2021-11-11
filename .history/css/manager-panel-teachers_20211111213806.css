@@ -1,0 +1,136 @@
+.main-row-left{
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.teacherlist-left-side{
+    height: 100vh !important;
+    overflow-y: auto;
+}
+.search-box{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 0 !important;
+}
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.edit-user-profile-form{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 35px 40px;
+}
+.profile-left{
+    padding-left: 30px !important;
+}
+
+.search-box input[type="text"]{
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 3px 15px;
+    margin-bottom: 30px;
+}
+.search-box input[type="text"]:focus{
+    border: 1px solid #3E5196;
+}
+.search-box input[type="button"],
+.add-new-teacher{
+    width: 140px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 0;
+    text-align: center;
+    color: #FFFFFF;
+    background: #EE537C;
+    border-radius: 25px;
+    height: 40px;
+    font-size: 14px;
+}
+.show-result-btn:hover{
+    background:#d84c71 !important;
+    color:#f6f6f6 !important;
+}
+.add-new-teacher:hover{
+    background:#d84c71 !important;
+    color:#f6f6f6 !important;
+}
+::placeholder {
+    color: #3E5196;
+    opacity: 0.5;
+    font-size: 14px; 
+  }
+  
+:-ms-input-placeholder { 
+    color:#3E5196;
+    opacity: 0.5;
+    font-size: 14px;
+}
+  
+::-ms-input-placeholder { 
+    color: #3E5196;
+    opacity: 0.5; 
+    font-size: 14px;
+}
+.search-box img{
+    width: 20px;
+}
+.search-box ul{
+    padding: 20px;
+    margin-bottom: 0 !important;
+}
+.search-box .search-tx{
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.search-input-ul li{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.teachers-list-box{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 0 !important;
+    position: relative;
+    margin: 20px 0;
+}
+.add-new-teacher{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.title-tx{
+    width: max-content;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.table thead th {
+    color: rgb(0,0,0,.5);
+    font-size: 15px;
+}
+.table td{
+    font-size: 15px;
+}
+.edit-delete{
+    text-align: center;
+}
+.edit-delete li img{
+    cursor: pointer;
+}

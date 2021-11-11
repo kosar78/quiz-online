@@ -1,0 +1,22 @@
+.main-row-left{
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.teacherlist-left-side{
+    height: 100vh !important;
+    overflow-y: auto;
+}
+.search-box{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    /* padding: 35px 40px; */
+}
+.line{
+    height: 1px;
+    
+}
