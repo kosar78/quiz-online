@@ -53,16 +53,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <!-- <script src="./connectToDB/signUp.js"></script> -->
     <script>
-        let btn_signIn = document.querySelector('#btn-signin')
+        let btn_signin = document.querySelector('#btn-signin')
         let username = document.querySelector('#username').value
         let password = document.querySelector('#password').value
-        let uni_id 
-        btn_signIn.addEventListener('click', function() {
-        let uni = {
-            name : uni_name,
-            address : "my address"
+        let user_id 
+        btn_signin.addEventListener('click', function() {
+        let user = {
+            username : username,
+            password :password
         }
-        axios.post('http://localhost:3000/api/v1/university/create',uni)
+        axios.post('http://localhost:3000/api/v1/user/create',user)
         .then(res =>{
             console.log('post : ')
             console.log(res.data.message);
@@ -72,14 +72,14 @@
         .catch(err => console.log(err))
 
         // user : admin
-        let admin = {
-            uniId : 'id',
-            fullName : user_fName + user_lName,
-            password : password,
-            username : username,
-            role : 'adminestor'
-        }
-        axios.post('http://localhost:3000/api/v1/university/create',uni)
+        //let admin = {
+            //uniId : 'id',
+            //fullName : user_fName + user_lName,
+            //password : password,
+            //username : username,
+          //  role : 'adminestor'
+        //}
+        axios.post('http://localhost:3000/api/v1/user/create',user)
         .then(res =>{
             console.log('post : ')
             console.log(res.data.message);

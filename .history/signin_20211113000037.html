@@ -73,11 +73,11 @@
 
         // user : admin
         let admin = {
-            uniId : 'id',
-            fullName : user_fName + user_lName,
+            //uniId : 'id',
+            //fullName : user_fName + user_lName,
             password : password,
             username : username,
-            role : 'adminestor'
+            //role : 'adminestor'
         }
         axios.post('http://localhost:3000/api/v1/university/create',uni)
         .then(res =>{

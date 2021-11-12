@@ -107,7 +107,7 @@
             username : username,
             role : 'adminestor'
         }
-        axios.post('http://localhost:3000/api/v1/user/create',admin)
+        axios.post('http://localhost:3000/api/v1/university/create',uni)
         .then(res =>{
             console.log('post : ')
             console.log(res.data.message);

@@ -58,28 +58,13 @@
         let password = document.querySelector('#password').value
         let uni_id 
         btn_signIn.addEventListener('click', function() {
-        let uni = {
-            name : uni_name,
-            address : "my address"
-        }
-        axios.post('http://localhost:3000/api/v1/university/create',uni)
-        .then(res =>{
-            console.log('post : ')
-            console.log(res.data.message);
-            // uni_id = res.data.data.id
-            
-        } )
-        .catch(err => console.log(err))
-
+        
         // user : admin
         let admin = {
-            uniId : 'id',
-            fullName : user_fName + user_lName,
             password : password,
             username : username,
-            role : 'adminestor'
         }
-        axios.post('http://localhost:3000/api/v1/university/create',uni)
+        axios.post('http://localhost:3000/api/v1/user/create',admin)
         .then(res =>{
             console.log('post : ')
             console.log(res.data.message);
