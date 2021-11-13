@@ -83,7 +83,7 @@
         let user_fName = document.querySelector('#user-fName').value
         let user_lName = document.querySelector('#user-lName').value
         let username = document.querySelector('#username').value
-        let passwordd = document.querySelector('#password').value
+        let password = document.querySelector('#password').value
         let uni_id="1111"
         btn_signUp.addEventListener('click', function() {
         let uni = {
@@ -100,7 +100,7 @@
             let admin = {
                 uniId : uni_id,
                 fullName : user_fName + user_lName,
-                password : passwordd,
+                password : password,
                 username : username,
                 role : 'adminestor'
             }

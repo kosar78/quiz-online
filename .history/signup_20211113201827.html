@@ -83,8 +83,8 @@
         let user_fName = document.querySelector('#user-fName').value
         let user_lName = document.querySelector('#user-lName').value
         let username = document.querySelector('#username').value
-        let passwordd = document.querySelector('#password').value
-        let uni_id="1111"
+        let password = document.querySelector('#password').value
+        let uni_id=""
         btn_signUp.addEventListener('click', function() {
         let uni = {
             name : uni_name,
@@ -96,27 +96,25 @@
             console.log('post : ')
             console.log(res.data.message);
             uni_id =res.data.data._id
-            // user : admin
-            let admin = {
-                uniId : uni_id,
-                fullName : user_fName + user_lName,
-                password : passwordd,
-                username : username,
-                role : 'adminestor'
-            }
-            axios.post('http://localhost:3000/api/v1/user/create',admin)
-            .then(res =>{
-                console.log('post : ')
-                console.log(res.data.message);
-                
-            } )
-            .catch(err => console.log(err))
             console.log(uni_id);
+        } )
+        .catch(err => console.log(err))
 
-            } )
-            .catch(err => console.log(err))
-
-        
+        // user : admin
+        let admin = {
+            uniId : uni_id,
+            fullName : user_fName + user_lName,
+            password : password,
+            username : username,
+            role : 'adminestor'
+        }
+        axios.post('http://localhost:3000/api/v1/user/create',admin)
+        .then(res =>{
+            console.log('post : ')
+            console.log(res.data.message);
+            
+        } )
+        .catch(err => console.log(err))
     })
 
     </script>
