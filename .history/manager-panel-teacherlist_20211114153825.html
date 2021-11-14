@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manager-panel.css">
-    <link rel="stylesheet" href="css/manager-panel-students.css">
+    <link rel="stylesheet" href="css/manager-panel-teachers.css">
     <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
     <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/manager-panel.js"></script>
-    <script type="text/javascript" src="js/manager-panel-students.js"></script>
-    <title>پنل مدیر-لیست دانشجویان</title>
+    <script type="text/javascript" src="js/manager-panel-teachers.js"></script>
+    <title>پنل مدیر-لیست اساتید</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -29,7 +29,7 @@
                             <img src="images/H0fb13ae027de48f4a32a8bd50971f4c5N.jpg_.webp" alt="">
                         </li>
                         <li class="user-name-phone">
-                            <p class="user-name" id="fullname">
+                            <p class="user-name">
                                 کوثر حسینی
                             </p>
                             <p class="user-phone">
@@ -47,9 +47,7 @@
                                 <a href="manager-panel-profile.html">
                                     <li><img src="images/manage-profile-icon.svg" alt="" class="mp-icon"></li>
                                     <li class="mp-name">
-                                    
                                         پروفایل
-                                    
                                     </li>
                                 </a>
                             </ul>
@@ -95,21 +93,20 @@
                         </li>
                     </ul>
                     <div class="user-management-cases show">
-                        <ul class="user-management-case ">
-                            
-                            <a href="manager-panel-teacherlist.html">
-                                <li class="umc-icon"><img src="images/teacher-icon-hide.svg" alt=""></li>
-                                <li class="umc-name">
-                                    استاد
-                                </li>
-                            </a>
-                        </ul>
                         <ul class="user-management-case active-case">
                             <div class="v-line-user-managment"></div>
-                            <li class="umc-icon"><img src="images/student-show-icon.svg" alt=""></li>
+                            <li class="umc-icon"><img src="images/show-teacher.svg" alt=""></li>
                             <li class="umc-name">
-                                دانشجو
+                                استاد
                             </li>
+                        </ul>
+                        <ul class="user-management-case">
+                            <a href="manager-panel-studentlist.html">
+                                <li class="umc-icon"><img src="images/student-icon-hide.svg" alt=""></li>
+                                <li class="umc-name">
+                                    دانشجو
+                                </li>
+                            </a>
                         </ul>
                         <ul class="user-management-case">
                             <a href="#">
@@ -122,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-9 col-md-9 studentlist-left-side left-side">
+            <div class="col-xl-9 col-md-9 teacherlist-left-side left-side">
                 <img src="images/menubar.svg" alt="" class="menubar hide">
 
                 <div class="row main-row-left">
@@ -138,22 +135,22 @@
                         <div class="line"></div>
                         <ul class="search-input-ul">
                             <li>
-                                <input type="text" name="search-name" id="student-name" placeholder="نام کاربری دانشجو">
+                                <input type="text" name="search-name" id="teacher-name" placeholder="نام کاربری استاد">
                             </li>
                             <li>
-                                <input type="text" name="search-username" id="student-username" placeholder="نام دانشجو">
+                                <input type="text" name="search-username" id="teacher-username" placeholder="نام استاد">
                             </li>
                             <li>
                                 <input class="show-result-btn" type="button" value="نمایش نتیجه">
                             </li>
                         </ul>
                     </div>
-                    <div class="col-xl-12 students-list-box">
+                    <div class="col-xl-12 teachers-list-box">
                         <p class="title-tx">
-                            دانشجویان
+                            اساتید
                         </p>
-                        <a href="manager-panel-addStudent.html">
-                            <input class="add-new-student" type="button" value="افزودن دانشجو جدید">
+                        <a href="manager-panel-addteacher.html">
+                            <input class="add-new-teacher" type="button" value="افزودن استاد جدید">
                         </a>
                         <!-- <div class="line"></div> -->
 
@@ -162,9 +159,9 @@
                                 <thead>
                                     <tr>
                                       <th>ردیف</th>
+                                      <th>کد</th>
                                       <th>نام کاربری</th>
                                       <th>نام</th>
-                                      <th>نام خانوادگی</th>
                                       <th>ایمیل</th>
                                       
                                       <th>حذف / ویرایش</th>
@@ -178,15 +175,12 @@
                                       </tr> -->
                                     <!-- <tr>
                                         <td>1</td>
-                                        
+                                        <td>1234</td>
                                         <td>
                                             fatemeh78
                                         </td>
                                         <td>
-                                            فاطمه
-                                        </td>
-                                        <td>
-                                            احمدیان
+                                            فاطمه احمدیان
                                         </td>
                                         <td>
                                             ahmadian.fatemeh78@gmail.com
@@ -194,42 +188,39 @@
                                         
                                         <td>
                                             <ul class="edit-delete">
-                                                <li><img class="delete-student" src="images/delete-icon.svg" alt=""></li>
-                                                <li><a href="manager-panel-addStudent.html"><img class="edit-student" src="images/edit-icon.svg" alt=""></a></li>
+                                                <li><img class="delete-teacher" src="images/delete-icon.svg" alt=""></li>
+                                                <li><a href="manager-panel-addteacher.html"><img class="edit-teacher" src="images/edit-icon.svg" alt=""></a></li>
 
                                             </ul>
                                         </td>
                                     </tr> -->
                                     <!-- <tr>
                                         <td>1</td>
-                                        
+                                        <td>1234</td>
                                         <td>
                                             fatemeh78
                                         </td>
                                         <td>
-                                            فاطمه
-                                        </td>
-                                        <td>
-                                            احمدیان
+                                            فاطمه احمدیان
                                         </td>
                                         <td>
                                             ahmadian.fatemeh78@gmail.com
                                         </td>
-                                        
+                                       
                                         <td>
                                             <ul class="edit-delete">
-                                                <li><img class="delete-student" src="images/delete-icon.svg" alt=""></li>
-                                                <li><a href="manager-panel-addStudent.html"><img class="edit-student" src="images/edit-icon.svg" alt=""></a></li>
+                                                <li><img class="delete-teacher" src="images/delete-icon.svg" alt=""></li>
+                                                <li><a href="manager-panel-addteacher.html"><img class="edit-teacher" src="images/edit-icon.svg" alt=""></a></li>
 
                                             </ul>
                                         </td>
                                     </tr> -->
                                   </tbody>
                             </table>
-                        <div>
-                            <p class="empty-list">
-                                لیست دانشجویان خالی است
-                            </p>
+                        </div>
+                        <p class="empty-list">
+                            لیست اساتید خالی است
+                        </p>
                     </div>
                 </div>
             </div>
@@ -237,12 +228,12 @@
     </div>
 
 
-    <div id="deleteStudent" class="modal fade"  role="dialog" > 
+    <div id="deleteTeacher" class="modal fade"  role="dialog" > 
         <div class="modal-dialog modal-dialog-centered ">
           <div class="modal-content">
-            <div class="modal-body delete-student-modal">
+            <div class="modal-body delete-teacher-modal">
                 <img src="images/Bucket 24px.svg" alt="">
-                <p>آیا می خواهید دانشجو را حذف کنید؟</p>
+                <p>آیا می خواهید استاد را حذف کنید؟</p>
                 <input class="delete-from-list" type="button" value="حذف گردد">
                 <input class="not-delete" type="button" value="خیر">
             </div>

@@ -129,18 +129,16 @@
             .then(res =>{
                 console.log('post : ')
                 console.log(res.data.message);
-                //localStorage.toggled=res.data.data.token
                 if(res.data.message!="با موفقیت ایجاد شد"){
                     ms=res.data.message
                 }
                 if(ms=="با موفقیت ایجاد شد"){
-                    
                     document.getElementById("message").style.color = "#16a085";
-                    
-                    window.location.href = "signin.html";
+                    localStorage.toggled=res.data.data.token
+                    window.location.href = "manager-panel-dashbord.html";
                     
                 }
-                
+
                 document.querySelector('#message').innerHTML=ms;
             } )
             .catch(err => console.log(err))

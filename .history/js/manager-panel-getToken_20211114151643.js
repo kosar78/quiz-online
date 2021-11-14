@@ -1,16 +1,15 @@
 
         
-            axios.get('http://localhost:3000/api/v1/user/my',{
+            axios.get('http://localhost:3000/api/v1/user/create',{
                 headers: {
                     'Authorization' : `Bearer ${localStorage.toggled}`
                 }
             })
             .then(res =>{
                 console.log('get : ')
-                console.log(res.data.data.fullName);
-                document.getElementById("fullname").innerHTML = res.data.data.fullName;
+                console.log(res);
                 
-            })
+            } )
             .catch(err => console.log(err))
 
         

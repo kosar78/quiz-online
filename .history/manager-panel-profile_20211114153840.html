@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manager-panel.css">
+    <link rel="stylesheet" href="css/manager-panel-profile.css">
     <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
     <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/manager-panel.js"></script>
-    <title>پنل مدیر- داشبورد</title>
+    <script type="text/javascript" src="js/manager-panel-profile.js"></script>
+    <title>پنل مدیر- پروفایل</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -27,11 +29,11 @@
                             <img src="images/H0fb13ae027de48f4a32a8bd50971f4c5N.jpg_.webp" alt="">
                         </li>
                         <li class="user-name-phone">
-                            <p class="user-name" id="fullname">
+                            <p class="user-name">
                                 کوثر حسینی
                             </p>
                             <p class="user-phone">
-                                
+                               
                             </p>
                         </li>
                         <li class="manage-profile">
@@ -65,16 +67,18 @@
                                     خروج
                                 </li>
                             </ul>
-                        </div>
+                        </div>                       
                     </div>
-                    <ul class="sidebar-case active-case dashbord">
+                    <ul class="sidebar-case dashbord">
                         <div class="v-line"></div>
-                        <li class="case-icon">
-                            <img src="images/dashbord-icon.svg" alt="">
-                        </li>
-                        <li class="case-name">
-                            داشبورد
-                        </li>
+                        <a href="manager-panel-dashbord.html">
+                            <li class="case-icon">
+                                <img src="images/dashbord-icon.svg" alt="">
+                            </li>
+                            <li class="case-name">
+                                داشبورد
+                            </li>
+                        </a>
                     </ul>
                     <ul class="sidebar-case user-management">
                         <div class="v-line"></div>
@@ -98,6 +102,7 @@
                                     استاد
                                 </li>
                             </a>
+                            
                         </ul>
                         <ul class="user-management-case">
                             <a href="manager-panel-studentlist.html">
@@ -106,7 +111,6 @@
                                     دانشجو
                                 </li>
                             </a>
-                            
                         </ul>
                         <ul class="user-management-case">
                             <a href="#">
@@ -119,8 +123,49 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-9 col-md-9 left-side">
+            <div class="col-xl-9 col-md-9 profile-left-side left-side">
                 <img src="images/menubar.svg" alt="" class="menubar hide">
+
+                <div class="row main-row-left">
+                    <div class="col-xl-6 profile-right">
+                        <div class="profile-user-image">
+                            <input type='file' id="imgInp" />
+                            <ul class="user-profile-place">
+                                <li class="upload-img-icon">
+                                    <img src="images/camera.svg" alt="">
+                                </li>
+                                <li><img src="images/H0fb13ae027de48f4a32a8bd50971f4c5N.jpg_.webp" alt="" class="profile-user-img"></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-6 profile-left">
+                        <div class="edit-user-profile-form">
+                           
+                            <p class="top-input">
+                                نام کاربری
+                            </p>
+                            <input type="text" name="username" id="username" value="kosar78">
+                            <p class="top-input">
+                                نام دانشگاه
+                            </p>
+                            <input type="text" name="university-name" id="university-name" value="چمران">
+                            <p class="top-input">
+                                نام
+                            </p>
+                            <input type="text" name="first-name" id="first-name" value="کوثر">
+                            <p class="top-input">
+                                نام خانوادگی
+                            </p>
+                            <input type="text" name="last-name" id="last-name" value="حسینی">
+                            <p class="top-input">
+                                ایمیل
+                            </p>
+                            <input type="text" name="email" id="email" value="kossarhoseini78@gmail.com">
+                            <input class="save-change-btn" type="button" value="ذخیره">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

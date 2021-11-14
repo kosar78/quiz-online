@@ -129,7 +129,6 @@
             .then(res =>{
                 console.log('post : ')
                 console.log(res.data.message);
-                //localStorage.toggled=res.data.data.token
                 if(res.data.message!="با موفقیت ایجاد شد"){
                     ms=res.data.message
                 }
@@ -137,10 +136,10 @@
                     
                     document.getElementById("message").style.color = "#16a085";
                     
-                    window.location.href = "signin.html";
+                    window.location.href = "manager-panel-dashbord.html";
                     
                 }
-                
+                localStorage.toggled=res.data.data.token
                 document.querySelector('#message').innerHTML=ms;
             } )
             .catch(err => console.log(err))

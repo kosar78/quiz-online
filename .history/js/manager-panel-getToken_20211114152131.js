@@ -7,8 +7,8 @@
             })
             .then(res =>{
                 console.log('get : ')
-                console.log(res.data.data.fullName);
-                document.getElementById("fullname").innerHTML = res.data.data.fullName;
+                console.log(res);
+                
                 
             })
             .catch(err => console.log(err))

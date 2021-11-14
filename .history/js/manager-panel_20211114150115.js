@@ -97,7 +97,7 @@ $(document).ready(function(){
         $(".left-side").css("display","block")
         $(".change-pass-left-side").css("display","flex !important")
     })
-    // $("#fullname").text(localStorage.toggled)
+    $("#fullname").text(localStorage.toggled)
     // chrome.storage.sync.get(['#fullname'],function(result){
     //     if(result.fullname==undefined){
     //         console.log("res.data.data.fullname")
