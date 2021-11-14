@@ -222,8 +222,7 @@
 }
 .empty-list{
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 @media(max-width:767px){
     .main-row-left{

@@ -79,7 +79,7 @@ let btn_signUp = document.querySelector('#btn-signup')
                 }
                 if(ms=="با موفقیت ایجاد شد"){
                     document.getElementById("message").style.color = "#16a085";
-                    window.location.href = "manager-panel-dashbord.html";
+                    document.getElementById("link-signup-btn").href = "manager-panel-dashbord.html";
                     
                 }
                 document.querySelector('#message').innerHTML=ms;
@@ -93,3 +93,4 @@ let btn_signUp = document.querySelector('#btn-signup')
 
         
     })
+    
