@@ -10,7 +10,7 @@
     <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/manager-panel.js"></script>
     <script type="text/javascript" src="js/manager-panel-teachers.js"></script>
-    <title>پنل مدیر-افزودن استاد</title>
+    <title>پنل مدیر-لیست اساتید</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -47,9 +47,7 @@
                                 <a href="manager-panel-profile.html">
                                     <li><img src="images/manage-profile-icon.svg" alt="" class="mp-icon"></li>
                                     <li class="mp-name">
-                                    
                                         پروفایل
-                                    
                                     </li>
                                 </a>
                             </ul>
@@ -68,6 +66,7 @@
                                         خروج
                                     </li>
                                 </a>
+
                             </ul>
                         </div>
                     </div>
@@ -127,78 +126,125 @@
                 <img src="images/menubar.svg" alt="" class="menubar hide">
 
                 <div class="row main-row-left">
-                    <div class="col-xl-12 addEdit-teacher-box">
-                        <p class="title-tx">
-                            افزودن / ویرایش استاد
-                        </p>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-6">
-                                <p class="top-input">
-                                    نام <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="firstname">
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <p class="top-input">
-                                    نام خانوادگی <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="lastname">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12">
-                                <p class="top-input">
-                                    نام کاربری <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="username">
-                            </div>
-                            
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-6">
-                                <p class="top-input">
-                                    رمز عبور <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="password">
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <p class="top-input">
-                                   تکرار رمز عبور <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="comfirm-password">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12">
-                                <p class="top-input">
-                                    ایمیل <span class="star">*</span>
-                                </p>
-                                <input type="text" name="" id="email">
-                            </div>
-                            
-                        </div>
-                        <p id="message">
-                    
-                        </p>
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 btns">
-                                <input class="save-teacher-info" id="save-teacher-info" type="button" value="ذخیره">
-                                <a href="manager-panel-teacherlist.html">
-                                    <input class="cancel" type="button" value="لغو">
-                                </a>
-                            </div>
-                            
-                        </div>
-                        
+                    <div class="col-xl-12 search-box">
+                        <ul>
+                            <li>
+                                <img src="images/search-icon.svg" alt="">
+                            </li>
+                            <li class="search-tx">
+                                جستجو
+                            </li>
+                        </ul>
+                        <div class="line"></div>
+                        <ul class="search-input-ul">
+                            <li>
+                                <input type="text" name="search-name" id="teacher-name" placeholder="نام کاربری استاد">
+                            </li>
+                            <li>
+                                <input type="text" name="search-username" id="teacher-username" placeholder="نام استاد">
+                            </li>
+                            <li>
+                                <input class="show-result-btn" type="button" value="نمایش نتیجه">
+                            </li>
+                        </ul>
                     </div>
-                    
+                    <div class="col-xl-12 teachers-list-box">
+                        <p class="title-tx">
+                            اساتید
+                        </p>
+                        <a href="manager-panel-addteacher.html">
+                            <input class="add-new-teacher" type="button" value="افزودن استاد جدید">
+                        </a>
+                        <!-- <div class="line"></div> -->
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th>ردیف</th>
+                                      <th>کد</th>
+                                      <th>نام کاربری</th>
+                                      <th>نام</th>
+                                      <th>ایمیل</th>
+                                      
+                                      <th>حذف / ویرایش</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      <!-- <tr class="empty-list-tr">
+                                       
+                                          <td>  لیست خالی است</td>
+                                        
+                                      </tr> -->
+                                    <!-- <tr>
+                                        <td>1</td>
+                                        <td>1234</td>
+                                        <td>
+                                            fatemeh78
+                                        </td>
+                                        <td>
+                                            فاطمه احمدیان
+                                        </td>
+                                        <td>
+                                            ahmadian.fatemeh78@gmail.com
+                                        </td>
+                                        
+                                        <td>
+                                            <ul class="edit-delete">
+                                                <li><img class="delete-teacher" src="images/delete-icon.svg" alt=""></li>
+                                                <li><a href="manager-panel-addteacher.html"><img class="edit-teacher" src="images/edit-icon.svg" alt=""></a></li>
+
+                                            </ul>
+                                        </td>
+                                    </tr> -->
+                                    <!-- <tr>
+                                        <td>1</td>
+                                        <td>1234</td>
+                                        <td>
+                                            fatemeh78
+                                        </td>
+                                        <td>
+                                            فاطمه احمدیان
+                                        </td>
+                                        <td>
+                                            ahmadian.fatemeh78@gmail.com
+                                        </td>
+                                       
+                                        <td>
+                                            <ul class="edit-delete">
+                                                <li><img class="delete-teacher" src="images/delete-icon.svg" alt=""></li>
+                                                <li><a href="manager-panel-addteacher.html"><img class="edit-teacher" src="images/edit-icon.svg" alt=""></a></li>
+
+                                            </ul>
+                                        </td>
+                                    </tr> -->
+                                  </tbody>
+                            </table>
+                        </div>
+                        <p class="empty-list">
+                            لیست اساتید خالی است
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="node_modules/axios/dist/axios.min.js"></script>
-    <script src="js/manager-panael-create-teacher.js"></script>s
 
-    
+
+    <div id="deleteTeacher" class="modal fade"  role="dialog" > 
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-body delete-teacher-modal">
+                <img src="images/Bucket 24px.svg" alt="">
+                <p>آیا می خواهید استاد را حذف کنید؟</p>
+                <input class="delete-from-list" type="button" value="حذف گردد">
+                <input class="not-delete" type="button" value="خیر">
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/manager-panel-getToken.js"></script>
 </body>
 </html>

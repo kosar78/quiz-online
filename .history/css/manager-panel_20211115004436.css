@@ -230,12 +230,16 @@ ul li{
 .mp-menubar:hover{
     background-color: #6060d0e3;
 }
+/* .sidebar-case:hover{
+    background-color: rgba(54, 54, 113, 0.5);
+} */
 #message{
     margin-bottom: 10px !important;
+    /* color:#d24d57; */
     font-size: 15px;
     margin-right: 36px;
     height: 25px;
-    margin-top: 15px;
+    margin-top: -10px;
 }
 @media(max-width:1199px){
     .user-name-phone{

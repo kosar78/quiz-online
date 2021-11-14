@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/manager-panel.css">
-    <link rel="stylesheet" href="css/manager-panel-students.css">
+    <link rel="stylesheet" href="css/manager-panel-teachers.css">
     <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
     <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
     <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/manager-panel.js"></script>
-    <script type="text/javascript" src="js/manager-panel-students.js"></script>
-    <title>پنل مدیر-افزودن دانشجو</title>
+    <script type="text/javascript" src="js/manager-panel-teachers.js"></script>
+    <title>پنل مدیر-افزودن استاد</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -97,21 +97,20 @@
                         </li>
                     </ul>
                     <div class="user-management-cases show">
-                        <ul class="user-management-case ">
-                            
-                            <a href="manager-panel-teacherlist.html">
-                                <li class="umc-icon"><img src="images/teacher-icon-hide.svg" alt=""></li>
-                                <li class="umc-name">
-                                    استاد
-                                </li>
-                            </a>
-                        </ul>
                         <ul class="user-management-case active-case">
                             <div class="v-line-user-managment"></div>
-                            <li class="umc-icon"><img src="images/student-show-icon.svg" alt=""></li>
+                            <li class="umc-icon"><img src="images/show-teacher.svg" alt=""></li>
                             <li class="umc-name">
-                                دانشجو
+                                استاد
                             </li>
+                        </ul>
+                        <ul class="user-management-case">
+                            <a href="manager-panel-studentlist.html">
+                                <li class="umc-icon"><img src="images/student-icon-hide.svg" alt=""></li>
+                                <li class="umc-name">
+                                    دانشجو
+                                </li>
+                            </a>
                         </ul>
                         <ul class="user-management-case">
                             <a href="#">
@@ -124,13 +123,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-9 col-md-9 studentlist-left-side left-side">
+            <div class="col-xl-9 col-md-9 teacherlist-left-side left-side">
                 <img src="images/menubar.svg" alt="" class="menubar hide">
 
                 <div class="row main-row-left">
-                    <div class="col-xl-12 addEdit-student-box">
+                    <div class="col-xl-12 addEdit-teacher-box">
                         <p class="title-tx">
-                            افزودن / ویرایش دانشجو
+                            افزودن / ویرایش استاد
                         </p>
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
@@ -178,13 +177,10 @@
                             </div>
                             
                         </div>
-                        <p id="message">
-
-                        </p>
                         <div class="row">
                             <div class="col-xl-12 col-md-12 btns">
-                                <input class="save-student-info" id="save-student-info" type="button" value="ذخیره">
-                                <a href="manager-panel-studentlist.html">
+                                <input class="save-teacher-info" id="create-teacher" type="button" value="ذخیره">
+                                <a href="manager-panel-teacherlist.html">
                                     <input class="cancel" type="button" value="لغو">
                                 </a>
                             </div>
@@ -198,7 +194,7 @@
         </div>
     </div>
     <script src="node_modules/axios/dist/axios.min.js"></script>
-    <script src="js/manager-panel-create-student.js"></script>
+    <script src="js/manager-panael-create-teacher.js"></script>s
 
     
 </body>
