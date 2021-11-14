@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager-panel.css">
+    <link rel="stylesheet" href="css/manager-panel-profile.css">
+    <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
+    <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/manager-panel.js"></script>
+    <script type="text/javascript" src="js/manager-panel-profile.js"></script>
+    <title>پنل مدیر- پروفایل</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row main-row">
+            <div class="col-xl-3 col-md-3 sidebar-parent">
+                <div class="resize-sidebar">
+                    <img class="resize-right show" src="images/right.svg" alt="">
+                    <img class="resize-left hide" src="images/left.svg" alt="">
+                </div>
+                <div class="exit-menubar hide">
+                    <img class="" src="images/exit-menubar.svg" alt="">
+                </div>
+                <div class="sidebar">
+                    <ul class="user-profile">
+                        <li class="user-img">
+                            <img src="images/Cute-Kids-Baby-Girl-Toddler-SDL005498623-2-ce2cf.JPEG" alt="">
+                        </li>
+                        <li class="user-name-phone">
+                            <p class="user-name">
+                                کوثر حسینی
+                            </p>
+                            <p class="user-phone">
+                               
+                            </p>
+                        </li>
+                        <li class="manage-profile">
+                            <img class="bottom show" src="images/bottom.svg" alt="">
+                            <img class="top hide" src="images/top.svg" alt="">
+                        </li>
+                    </ul>
+                    <div class="manage-profile-menubar hide">
+                        <div>
+                            <ul class="mp-menubar">
+                                <a href="manager-panel-profile.html">
+                                    <li><img src="images/manage-profile-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                    
+                                        پروفایل
+                                    
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <a href="manager-panel-change-password.html">
+                                    <li><img src="images/change-pass-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                        تغییر رمز عبور
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <li><img src="images/profile-manage-exit-icon.svg" alt="" class="mp-icon"></li>
+                                <li class="mp-name">
+                                    خروج
+                                </li>
+                            </ul>
+                        </div>                       
+                    </div>
+                    <ul class="sidebar-case dashbord">
+                        <div class="v-line"></div>
+                        <a href="manager-panel-dashbord.html">
+                            <li class="case-icon">
+                                <img src="images/dashbord-icon.svg" alt="">
+                            </li>
+                            <li class="case-name">
+                                داشبورد
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="sidebar-case user-management">
+                        <div class="v-line"></div>
+                        <li class="case-icon">
+                            <img src="images/user-management-icon.svg" alt="">
+                        </li>
+                        <li class="case-name">
+                            مدیریت کاربران
+                        </li>
+
+                        <li class="user-mangement-cases-icon">
+                            <img id="user-mangement-cases-icon-bottom" class="show" src="images/bottom.svg" alt="">
+                            <img id="user-mangement-cases-icon-top" class="hide" src="images/top.svg" alt="">
+                        </li>
+                    </ul>
+                    <div class="user-management-cases hide">
+                        <ul class="user-management-case">
+                            <a href="manager-panel-teacherlist.html">
+                                <li class="umc-icon"><img src="images/show-teacher.svg" alt=""></li>
+                                <li class="umc-name">
+                                    استاد
+                                </li>
+                            </a>
+                            
+                        </ul>
+                        <ul class="user-management-case">
+                            <a href="manager-panel-studentlist.html">
+                                <li class="umc-icon"><img src="images/student-icon-hide.svg" alt=""></li>
+                                <li class="umc-name">
+                                    دانشجو
+                                </li>
+                            </a>
+                        </ul>
+                        <ul class="user-management-case">
+                            <a href="#">
+                                <li class="umc-icon"><img src="images/course-icon-hide.svg" alt=""></li>
+                                <li class="umc-name">
+                                    درس
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-md-9 profile-left-side left-side">
+                <img src="images/menubar.svg" alt="" class="menubar hide">
+
+                <div class="row main-row-left">
+                    <div class="col-xl-6 profile-right">
+                        <div class="profile-user-image">
+                            <input type='file' id="imgInp" />
+                            <ul class="user-profile-place">
+                                <li class="upload-img-icon">
+                                    <img src="images/camera.svg" alt="">
+                                </li>
+                                <li><img src="images/Cute-Kids-Baby-Girl-Toddler-SDL005498623-2-ce2cf.JPEG" alt="" class="profile-user-img"></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xl-6 profile-left">
+                        <div class="edit-user-profile-form">
+                           
+                            <p class="top-input">
+                                نام کاربری
+                            </p>
+                            <input type="text" name="username" id="username" value="kosar78">
+                            <p class="top-input">
+                                نام دانشگاه
+                            </p>
+                            <input type="text" name="university-name" id="university-name" value="چمران">
+                            <p class="top-input">
+                                نام
+                            </p>
+                            <input type="text" name="first-name" id="first-name" value="کوثر">
+                            <p class="top-input">
+                                نام خانوادگی
+                            </p>
+                            <input type="text" name="last-name" id="last-name" value="حسینی">
+                            <p class="top-input">
+                                ایمیل
+                            </p>
+                            <input type="text" name="email" id="email" value="kossarhoseini78@gmail.com">
+                            <input class="save-change-btn" type="button" value="ذخیره">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
+    <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+    <title>ثبت نام</title>
+</head>
+<body>
+    <div class="container-fluid signup-container">
+        <div class="row main-row">
+            <div class="col-xl-6 col-md-8 col-sm-10 signup-form">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <img src="images/ls_college.svg" alt="">
+                        <input type="text" name="name" id="uni-name" placeholder="نام دانشگاه">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <img src="images/user-icon.svg" alt="">
+                        <input type="text" name="name" id="user-fName" placeholder="نام">
+                    </div>
+                    <div class="col-xl-6">
+                        <img src="images/user-icon.svg" alt="">
+                        <input type="text" name="name" id="user-lName" placeholder="نام خانوادگی">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <img src="images/user-icon.svg" alt="">
+                        <input type="text" name="username" id="username" placeholder="نام کاربری">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <img src="images/lock.svg" alt="">
+                        <img class="show-pass1" src="images/icons8-eye-24.png" alt="">
+                        <img class="hide-pass1" src="images/icons8-hide-30.png" alt="">
+                        <input type="password" name="password" id="password" placeholder="رمز عبور">
+                    </div>
+                    <div class="col-xl-6">
+                        <img src="images/lock.svg" alt="">
+                        <img class="show-pass2" src="images/icons8-eye-24.png" alt="">
+                        <img class="hide-pass2" src="images/icons8-hide-30.png" alt="">
+                        <input type="password" name="password" id="comfirm-password" placeholder="تکرار رمز عبور">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <img src="images/email.svg" alt="">
+                        <input type="text" name="email" id="email" placeholder="ایمیل">
+                    </div>
+                </div>
+                <p id="message">
+                    
+                </p>
+                <div class="row justify-content-center btns">
+                    <div class="col-xl-6 signup-btn-row">
+                        <input type="button" id="btn-signup" value="ثبت نام">
+                    </div>
+                    <div class="col-xl-6">
+                        <input type="button" id="btn-cancel" value="لغو">
+                    </div>
+                </div>
+                <div class="have-acount">
+                    <a href="#">
+                        حساب کاربری دارید؟
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-6 vector">
+                <img src="images/young-girl-sitting-on-the-floor-with-a-laptop-vector.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <!-- <script src="./connectToDB/signUp.js"></script> -->
+    <script>
+        let btn_signUp = document.querySelector('#btn-signup')
+        
+        let uni_id=""
+        
+        btn_signUp.addEventListener('click', function() {
+
+        let uni_name = document.querySelector('#uni-name').value
+        let user_fName = document.querySelector('#user-fName').value
+        let user_lName = document.querySelector('#user-lName').value
+        let username = document.querySelector('#username').value
+        let password = document.querySelector('#password').value
+        let email = document.querySelector('#email').value
+        let uni = {
+            name : uni_name,
+            address : "my address"
+        }
+        
+        axios.post('http://localhost:3000/api/v1/university/create',uni)
+        .then(res =>{
+            console.log('post : ')
+            console.log(res.data.message);
+            let ms=res.data.message
+            
+            if(ms=="یکی از فیلد های ضروری را پر نکرده اید"){
+                uni_id=""    
+            }
+            else{
+                uni_id =res.data.data.id
+            }
+            console.log(password);
+            // user : admin
+            let admin = {
+                uniId : uni_id,
+                fullName : user_fName + " " + user_lName,
+                password : password,
+                email : email,
+                username : username,
+                role : 'adminestor'
+            }
+            axios.post('http://localhost:3000/api/v1/user/create',admin)
+            .then(res =>{
+                console.log('post : ')
+                console.log(res.data.message);
+                if(res.data.message!="با موفقیت وارد شوید"){
+                    ms=res.data.message
+                }
+                if(ms=="با موفقیت وارد شوید"){
+                    document.getElementById("message").style.color = "#16a085";
+                }
+                document.querySelector('#message').innerHTML=ms;
+            } )
+            .catch(err => console.log(err))
+
+            
+
+            } )
+        .catch(err => console.log(err))
+
+        
+    })
+
+    </script>
+</body>
+</html>
