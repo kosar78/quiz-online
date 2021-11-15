@@ -42,7 +42,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
             })
             .then(res =>{
                 console.log('get : ')
-                console.log(res.data.data);
+                console.log(res);
                 // let teacher_array={}
                 // let user_lenght
                 // if(res.data.data)

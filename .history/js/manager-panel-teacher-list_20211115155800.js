@@ -30,7 +30,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
             let role="teacher"
             axios.get('http://localhost:3000/api/v1/user/list?role=teacher',{
                 
-                Body :{
+               Body :{
                     role : "teacher"
                 },
                 headers: {
@@ -42,7 +42,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
             })
             .then(res =>{
                 console.log('get : ')
-                console.log(res.data.data);
+                console.log(res);
                 // let teacher_array={}
                 // let user_lenght
                 // if(res.data.data)
