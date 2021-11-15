@@ -76,20 +76,6 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                         
                         document.getElementById("list").appendChild(tr);     
                     }
-                    $(document).ready(function(){
-                        $(".delete-from-list").click(function(){
-                            $("#deleteTeacher").modal("hide")
-                        })
-                        $(".not-delete").click(function(){
-                            $("#deleteTeacher").modal("hide")
-                        })
-                        
-                        $(".delete-teacher").click(function(){
-                            $("#deleteTeacher").modal("toggle")
-                        })
-                            
-                        
-                    })
                 }
                 
             })
@@ -100,3 +86,17 @@ axios.get('http://localhost:3000/api/v1/user/my',{
 
 
 
+$(document).ready(function(){
+    $(".delete-from-list").click(function(){
+        $("#deleteTeacher").modal("hide")
+    })
+    $(".not-delete").click(function(){
+        $("#deleteTeacher").modal("hide")
+    })
+    
+    $(".delete-teacher").click(function(){
+        $("#deleteTeacher").modal("toggle")
+    })
+        
+    
+})
