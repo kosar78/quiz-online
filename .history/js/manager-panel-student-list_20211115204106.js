@@ -10,7 +10,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
             axios.get('http://localhost:3000/api/v1/user/list',{
                 
                 body :{
-                    role : "teacher"
+                    role : "student"
                 },
                 headers: {
                     'Authorization' : `Bearer ${localStorage.toggled}`
@@ -26,7 +26,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                 let j=0
                 let teacher_array={}
                 for(let i=0;i<user_array.length;i=i+1){
-                    if(user_array[i].role=="teacher"){
+                    if(user_array[i].role=="student"){
                         teacher_array[j]=user_array[i]
                         j=j+1
                     }
@@ -36,7 +36,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                 console.log(teacher_array);
                 console.log(userlist_lenght)
                 if(userlist_lenght==0){
-                    document.getElementById("empty-list").innerHTML = "لیست اساتید خالی است";
+                    document.getElementById("empty-list").innerHTML = "لیست دانشجویان خالی است";
                 }
                 else{
                     for(let i=0;i<userlist_lenght;i=i+1){
@@ -87,14 +87,14 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                     }
                     $(document).ready(function(){
                         $(".delete-from-list").click(function(){
-                            $("#deleteTeacher").modal("hide")
+                            $("#deleteStudent").modal("hide")
                         })
                         $(".not-delete").click(function(){
-                            $("#deleteTeacher").modal("hide")
+                            $("#deleteStudent").modal("hide")
                         })
                         
-                        $(".delete-teacher").click(function(){
-                            $("#deleteTeacher").modal("toggle")
+                        $(".delete-student").click(function(){
+                            $("#deleteStudent").modal("toggle")
                         })
                             
                         

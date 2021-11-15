@@ -32,7 +32,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                     }
                 }
                 
-                let userlist_lenght=j
+                let userlist_lenght=j+1
                 console.log(teacher_array);
                 console.log(userlist_lenght)
                 if(userlist_lenght==0){

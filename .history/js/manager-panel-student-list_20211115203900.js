@@ -10,7 +10,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
             axios.get('http://localhost:3000/api/v1/user/list',{
                 
                 body :{
-                    role : "teacher"
+                    role : "student"
                 },
                 headers: {
                     'Authorization' : `Bearer ${localStorage.toggled}`
@@ -26,7 +26,7 @@ axios.get('http://localhost:3000/api/v1/user/my',{
                 let j=0
                 let teacher_array={}
                 for(let i=0;i<user_array.length;i=i+1){
-                    if(user_array[i].role=="teacher"){
+                    if(user_array[i].role=="student"){
                         teacher_array[j]=user_array[i]
                         j=j+1
                     }
