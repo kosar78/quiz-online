@@ -116,7 +116,7 @@ $(document).ready(function(){
                 })
                 
                 $(".delete-course").click(function(){
-                    $("#deleteCourse").modal("show")
+                    $("#deleteCourse").modal("toggle")
                 })
                 $(".close-list").click(function(){
                     $("#students-course-list").modal("toggle")
