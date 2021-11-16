@@ -177,8 +177,7 @@
     text-align: center;
     margin-top: 10px;
 }
-.delete-from-list,
-.close-list{
+.delete-from-list{
     width:100px;
     outline: none;
     margin: 15px 0;
@@ -276,8 +275,7 @@
         margin-bottom: 15px;
     }
 }
-.empty-list,
-.empty-list-student{
+.empty-list{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -293,4 +291,17 @@
 }
 .course-student-btn:hover{
     background: #363671 !important;
+}
+.students-listt{
+    position: absolute;
+    top: 50px;
+    
+    overflow-x: hidden;
+}
+.students-listt .col-xl-6{
+    background: #363671;
+    color: #fff !important;
+}
+.students-listt tbody{
+    color: #fff !important;
 }

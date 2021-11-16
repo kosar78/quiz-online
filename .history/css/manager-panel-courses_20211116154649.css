@@ -177,8 +177,7 @@
     text-align: center;
     margin-top: 10px;
 }
-.delete-from-list,
-.close-list{
+.delete-from-list{
     width:100px;
     outline: none;
     margin: 15px 0;
