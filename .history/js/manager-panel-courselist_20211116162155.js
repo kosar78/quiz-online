@@ -58,7 +58,7 @@ $(document).ready(function(){
 
                     
                 }
-               
+                console.log(course_students_array)
                 
                 var tr = document.createElement("tr");
                 var td1 = document.createElement("td");
@@ -122,44 +122,45 @@ $(document).ready(function(){
                     $("#students-course-list").modal("toggle")
                 })
                 $(".course-student-btn").click(function(){
-                    
+                    let e=0
                     if(course_students_array.length==0){
                         document.getElementById("empty-list-student").innerHTML = "لیست  دانشجویان  خالی است";
-                        
+                        e++
                     }
                     else{
                         for(let x=0;x<course_students_array.length;x++){
-
-                                console.log("hh")
-                                var tr = document.createElement("tr");
-                                var td1 = document.createElement("td");
-                                var td2 = document.createElement("td");
-                                var td3 = document.createElement("td");
-                                var td4 = document.createElement("td");
-                                
-                                var td1_text = document.createTextNode(x+1);
-                                var td2_text = document.createTextNode(course_students_array[x].fullName);
-                                var td3_text = document.createTextNode(course_students_array[x].username);
-                                var td4_text = document.createTextNode(course_students_array[x].email);
-                                
-                                td1.appendChild(td1_text);
-                                td2.appendChild(td2_text);
-                                td3.appendChild(td3_text);
-                                td4.appendChild(td4_text);
-                                tr.appendChild(td1)
-                                tr.appendChild(td2)
-                                tr.appendChild(td3)
-                                tr.appendChild(td4)
-                                document.getElementById("list-student").append("<tr><td>tt</td></tr>");
+                            console.log(course_students_array.length[x])
+                            var tr = document.createElement("tr");
+                            var td1 = document.createElement("td");
+                            var td2 = document.createElement("td");
+                            var td3 = document.createElement("td");
+                            var td4 = document.createElement("td");
                             
+                            var td1_text = document.createTextNode(x+1);
+                            var td2_text = document.createTextNode(course_students_array[x].fullName);
+                            var td3_text = document.createTextNode(course_students_array[x].username);
+                            var td4_text = document.createTextNode(course_students_array[x].email);
+                            
+                            td1.appendChild(td1_text);
+                            td2.appendChild(td2_text);
+                            td3.appendChild(td3_text);
+                            td4.appendChild(td4_text);
+                            tr.appendChild(td1)
+                            tr.appendChild(td2)
+                            tr.appendChild(td3)
+                            tr.appendChild(td4)
+                            
+                            $("#modalSelector").on('shown.bs.modal', function(){
+                                document.getElementById("list-student").appendChild(tr);
+                              });
                             
                             
                         }
-                        
+                        e++
                     }
-                    
-                    $("#students-course-list").modal("toggle")
-                    
+                    if(e>0){
+                        $("#students-course-list").modal("toggle")
+                    }
                     
                 })
             }

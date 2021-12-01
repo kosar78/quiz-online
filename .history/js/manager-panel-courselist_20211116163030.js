@@ -58,7 +58,7 @@ $(document).ready(function(){
 
                     
                 }
-               
+                console.log(course_students_array)
                 
                 var tr = document.createElement("tr");
                 var td1 = document.createElement("td");

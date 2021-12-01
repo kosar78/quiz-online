@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager-panel.css">
+    <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
+    <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/manager-panel.js"></script>
+    <title>پنل استاد- داشبورد</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row main-row">
+            <div class="col-xl-3 col-md-3 sidebar-parent">
+                <div class="resize-sidebar">
+                    <img class="resize-right show" src="images/right.svg" alt="">
+                    <img class="resize-left hide" src="images/left.svg" alt="">
+                </div>
+                <div class="exit-menubar hide">
+                    <img class="" src="images/exit-menubar.svg" alt="">
+                </div>
+                <div class="sidebar">
+                    <ul class="user-profile">
+                        <li class="user-img">
+                            <img src="images/H0fb13ae027de48f4a32a8bd50971f4c5N.jpg_.webp" alt="">
+                        </li>
+                        <li class="user-name-phone">
+                            <p class="user-name" id="fullname">
+                                کوثر حسینی
+                            </p>
+                            <p class="user-phone">
+                                
+                            </p>
+                        </li>
+                        <li class="manage-profile">
+                            <img class="bottom show" src="images/bottom.svg" alt="">
+                            <img class="top hide" src="images/top.svg" alt="">
+                        </li>
+                    </ul>
+                    <div class="manage-profile-menubar hide">
+                        <div>
+                            <ul class="mp-menubar">
+                                <a href="#">
+                                    <li><img src="images/manage-profile-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                    
+                                        پروفایل
+                                    
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <a href="#">
+                                    <li><img src="images/change-pass-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                        تغییر رمز عبور
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <a href="home.html">
+                                    <li><img src="images/profile-manage-exit-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                        خروج
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="sidebar-case active-case dashbord">
+                        <div class="v-line"></div>
+                        <li class="case-icon">
+                            <img src="images/dashbord-icon.svg" alt="">
+                        </li>
+                        <li class="case-name">
+                            داشبورد
+                        </li>
+                    </ul>
+                    <ul class="sidebar-case  test-managment">
+                        <div class="v-line"></div>
+                        <li class="case-icon">
+                            <img src="images/carbon_gui-management.svg" alt="">
+                        </li>
+                        <li class="case-name">
+                            مدیریت آزمون ها
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="col-xl-9 col-md-9 left-side">
+                <img src="images/menubar.svg" alt="" class="menubar hide">
+                <div class="row main-row-left">
+                    <div class="col-xl-12 teacher-dashbord-title">
+                        <ul>
+                            <li>
+                                <img src="images/user-in-dashbord.svg" alt="">
+                            </li>
+                            <li class="title-tx">
+                                پنل استاد
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-xl-12 tests-list-box">
+                        <p class="title-tx">
+                            آزمون ها
+                        </p>
+                        <a href="manager-panel-addteacher.html">
+                            <input class="add-new-teacher" type="button" value="افزودن استاد جدید">
+                        </a>
+                        <!-- <div class="line"></div> -->
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th>ردیف</th>
+                                      
+                                      <th>نام کاربری</th>
+                                      <th>نام</th>
+                                      <th>ایمیل</th>
+                                      
+                                      <th>حذف / ویرایش</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="list">
+                                      
+                                  </tbody>
+                            </table>
+                        </div>
+                        <p class="empty-list" id="empty-list">
+                            
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <!-- <script src="js/manager-panel-getToken.js"></script> -->
+</body>
+</html>

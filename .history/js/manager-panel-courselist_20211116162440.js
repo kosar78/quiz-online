@@ -58,7 +58,7 @@ $(document).ready(function(){
 
                     
                 }
-               
+                console.log(course_students_array)
                 
                 var tr = document.createElement("tr");
                 var td1 = document.createElement("td");
@@ -122,14 +122,17 @@ $(document).ready(function(){
                     $("#students-course-list").modal("toggle")
                 })
                 $(".course-student-btn").click(function(){
-                    
+                    let e=0
                     if(course_students_array.length==0){
                         document.getElementById("empty-list-student").innerHTML = "لیست  دانشجویان  خالی است";
-                        
+                        e++
                     }
                     else{
                         for(let x=0;x<course_students_array.length;x++){
-
+                            
+                            
+                            
+                            $("#students-course-list").on('show', function(){
                                 console.log("hh")
                                 var tr = document.createElement("tr");
                                 var td1 = document.createElement("td");
@@ -150,16 +153,16 @@ $(document).ready(function(){
                                 tr.appendChild(td2)
                                 tr.appendChild(td3)
                                 tr.appendChild(td4)
-                                document.getElementById("list-student").append("<tr><td>tt</td></tr>");
-                            
+                                document.getElementById("list-student").appendChild(tr);
+                              });
                             
                             
                         }
-                        
+                        e++
                     }
-                    
-                    $("#students-course-list").modal("toggle")
-                    
+                    if(e>0){
+                        $("#students-course-list").modal("toggle")
+                    }
                     
                 })
             }
