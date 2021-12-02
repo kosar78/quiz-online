@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/manager-panel.css">
+    <link rel="stylesheet" href="css/teacher-panel-create-test.css">
+    <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
+    <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/manager-panel.js"></script>
+    <script type="text/javascript" src="js/teacher-panel-create-test.js"></script>
+    <title>پنل استاد- ایجاد آزمون</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row main-row">
+            <div class="col-xl-3 col-md-3 sidebar-parent">
+                <div class="resize-sidebar">
+                    <img class="resize-right show" src="images/right.svg" alt="">
+                    <img class="resize-left hide" src="images/left.svg" alt="">
+                </div>
+                <div class="exit-menubar hide">
+                    <img class="" src="images/exit-menubar.svg" alt="">
+                </div>
+                <div class="sidebar">
+                    <ul class="user-profile">
+                        <li class="user-img">
+                            <img src="images/H0fb13ae027de48f4a32a8bd50971f4c5N.jpg_.webp" alt="">
+                        </li>
+                        <li class="user-name-phone">
+                            <p class="user-name" id="fullname">
+                                کوثر حسینی
+                            </p>
+                            <p class="user-phone">
+                                
+                            </p>
+                        </li>
+                        <li class="manage-profile">
+                            <img class="bottom show" src="images/bottom.svg" alt="">
+                            <img class="top hide" src="images/top.svg" alt="">
+                        </li>
+                    </ul>
+                    <div class="manage-profile-menubar hide">
+                        <div>
+                            <ul class="mp-menubar">
+                                <a href="manager-panel-profile.html">
+                                    <li><img src="images/manage-profile-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                    
+                                        پروفایل
+                                    
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <a href="manager-panel-change-password.html">
+                                    <li><img src="images/change-pass-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                        تغییر رمز عبور
+                                    </li>
+                                </a>
+                            </ul>
+                            <ul class="mp-menubar">
+                                <a href="home.html">
+                                    <li><img src="images/profile-manage-exit-icon.svg" alt="" class="mp-icon"></li>
+                                    <li class="mp-name">
+                                        خروج
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="sidebar-case  dashbord">
+                        <div class="v-line"></div>
+                        <a href="teacher-panel-dashbord.html">
+                            <li class="case-icon">
+                                <img src="images/dashbord-icon.svg" alt="">
+                            </li>
+                            <li class="case-name">
+                                داشبورد
+                            </li>
+                        </a>
+                    </ul>
+                    <ul class="sidebar-case active-case  test-managment">
+                        <div class="v-line"></div>
+                        <li class="case-icon">
+                            <img src="images/carbon_gui-management.svg" alt="">
+                        </li>
+                        <li class="case-name">
+                            مدیریت آزمون ها
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="col-xl-9 col-md-9 testslist-left-side left-side">
+                <img src="images/menubar.svg" alt="" class="menubar hide">
+
+                <div class="row main-row-left">
+                    <div class="col-xl-12 addEdit-course-box">
+                        <p class="title-tx">
+                           اطلاعات پایه
+                        </p>
+                        <div class="line"></div>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <p class="top-input">
+                                    نام درس <span class="star">*</span>
+                                </p>
+                                <input type="text" name="" id="course-name">
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <p class="top-input">
+                                    نام استاد <span class="star">*</span>
+                                </p>
+                                <select name="teachers" id="teachers">
+                                    <option >انتخاب کنید</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="deleteTest" class="modal fade"  role="dialog" > 
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-body delete-test-modal">
+                <img src="images/Bucket 24px.svg" alt="">
+                <p>آیا می خواهید آزمون را حذف کنید؟</p>
+                <input class="delete-from-list" type="button" value="حذف گردد">
+                <input class="not-delete" type="button" value="خیر">
+            </div>
+          </div>
+      
+        </div>
+    </div>
+
+    <div id="testType" class="modal fade"  role="dialog" > 
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content">
+            <div class="modal-body test-type-modal">
+                <p>نوع سوالات آزمون شما به چه صورتی می باشد؟</p>
+                <a href="#"><input class="test-type-btns" type="button" value="تستی"></a>
+                <a href="#"><input class="test-type-btns" type="button" value="تشریحی"></a>
+                <input class="cancel" type="button" value="انصراف">
+            </div>
+          </div>
+      
+        </div>
+    </div>
+      <script src="node_modules/axios/dist/axios.min.js"></script>
+    <!-- <script src="js/manager-panel-student-list.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+.main-row-left{
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+}
+.createTest-left-side{
+    height: 100vh !important;
+    overflow-y: auto;
+}
+.active-case .v-line{
+    height: 61px !important;
+}
+.base-info{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 0 !important;
+}
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.base-info input[type="text"]{
+    width: 100% !important;
+}
+.base-info input[type="text"],
+#courses{
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 3px 15px;
+}
+#courses{
+    width: 100%;
+    padding-left: 15px;
+    background-color: rgba(62, 81, 150, 0.05);
+    margin-bottom: 30px;
+}
+.title-tx{
+    width: max-content;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.base-info input[type="text"]:focus{
+    border: 1px solid #3E5196;
+}
+.top-input span{
+    color: #EE537C !important;
+}
+.top-input{
+    color: #3e5196;
+    margin-bottom: 5px;
+    padding-right: 15px;
+
+}
+
+/* ::placeholder {
+    color: #3E5196;
+    opacity: 0.5;
+    font-size: 14px; 
+}
+  
+:-ms-input-placeholder { 
+    color:#3E5196;
+    opacity: 0.5;
+    font-size: 14px;
+}
+  
+::-ms-input-placeholder { 
+    color: #3E5196;
+    opacity: 0.5; 
+    font-size: 14px;
+} */

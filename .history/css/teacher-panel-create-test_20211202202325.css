@@ -1,0 +1,156 @@
+
+.main-row-left{
+    padding-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+}
+.createTest-left-side{
+    height: 100vh !important;
+    overflow-y: auto;
+}
+.active-case .v-line{
+    height: 61px !important;
+}
+.base-info,
+.test-setting,
+.test-holding{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 0 !important;
+    margin-top: 20px;
+}
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.test-datetime,
+.base-info input[type="text"]{
+    width: 100% !important;
+}
+.test-datetime,
+.base-info input[type="text"],
+#courses{
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 3px 15px;
+}
+#courses{
+    width: 100%;
+    padding-left: 15px;
+    background-color: rgba(62, 81, 150, 0.05);
+    margin-bottom: 30px;
+}
+.title-tx{
+    width: max-content;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.base-info input[type="text"]:focus{
+    border: 1px solid #3E5196;
+}
+.test-datetime:focus{
+    border: 1px solid #3E5196;
+}
+.top-input span{
+    color: #EE537C !important;
+}
+.top-input{
+    color: #3e5196;
+    margin-bottom: 5px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+.main-row-left .row {
+    padding: 0 25px;
+    margin-bottom: 25px;
+}
+@media(max-width:767px){
+    .main-row-left{
+        margin-top: 25px;
+    }
+    .main-row-left .row{
+        margin-bottom: 0;
+    }
+    
+    .top-input{
+        margin-top: 15px;
+    }
+    
+}
+@media(max-width:514px){
+    
+    .main-row-left {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+   
+}
+@media(max-width:425px){
+    .main-row-left .row{
+        padding: 0 15px;
+    }
+    
+}
+.circle-b{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #262F56;
+    box-sizing: border-box;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #fff;
+    padding-top: 2px;
+    padding-right: 2px;
+    margin-right: 25px;
+}
+#circle-p{
+    position: relative;
+    top: -5px;
+    right: 7px;
+
+}
+.circle-2{
+    
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    background: #363671;
+   
+}
+.choosed{
+    display: block;
+}
+.unchoosed{
+    display: none;
+}
+.ul-choose{
+    margin-top: 30px;
+}
+
+.setting-checkbox-input{
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+.setting-checkbox{
+    margin-top: 15px;
+}
+.title-tx-2{
+    font-weight: 100;
+    margin-top: 35px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}

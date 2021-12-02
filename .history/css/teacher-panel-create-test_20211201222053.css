@@ -1,0 +1,38 @@
+.active-case .v-line{
+    height: 61px !important;
+}
+.base-info{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 0 !important;
+}
+.line{
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.base-info input[type="text"]{
+    width: 100% !important;
+}
+.base-info input[type="text"],
+#courses{
+    border-radius: 25px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 3px 15px;
+}
+#courses{
+    width: 100%;
+    padding-left: 15px;
+    background-color: rgba(62, 81, 150, 0.05);
+    margin-bottom: 30px;
+}
+
+.base-info input[type="text"]:focus{
+    border: 1px solid #3E5196;
+}
