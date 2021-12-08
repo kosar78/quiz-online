@@ -1,0 +1,48 @@
+.table thead th {
+    color: rgb(0,0,0,.5);
+    font-size: 15px;
+}
+.table td{
+    font-size: 15px;
+}
+
+
+
+.add-new-file{
+    width: 140px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 0;
+    text-align: center;
+    color: #FFFFFF;
+    background: #EE537C;
+    /* border-radius: 25px; */
+    height: 40px;
+    font-size: 14px;
+    margin-right: 15px;
+}
+.add-new-file:hover{
+    background:#d84c71 !important;
+    color:#f6f6f6 !important;
+}
+.cancel{
+    padding-top: 10px;
+    border-radius: 10px !important;
+}
+.prev-step-btn{
+    background-color: #777;
+    color: #fff;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+}
+.prev-step-btn ul{
+    text-align: center;
+}
+.cancel{
+    
+}
