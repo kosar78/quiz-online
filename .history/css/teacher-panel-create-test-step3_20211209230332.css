@@ -1,0 +1,38 @@
+.cancel{
+    padding-top: 10px;
+    border-radius: 10px !important;
+    width: 100px !important;
+    cursor: pointer;
+}
+.prev-step-btn,
+.next-step-btn,
+.add-new-q,
+.final-registion{
+    background-color: #777;
+    color: #fff;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+.add-new-q{
+    background-color:#0085FF;
+}
+.final-registion{
+    background-color: #60d965;
+}
+.prev-step-btn ul,
+.next-step-btn ul{
+    text-align: center;
+}
+.next-step-btn{
+    background-color: #60d965 !important;
+}
+.btns-ul{
+    text-align: center;
+    margin-top: 30px;
+}

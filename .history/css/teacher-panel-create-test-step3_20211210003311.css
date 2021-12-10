@@ -1,0 +1,90 @@
+.cancel{
+    padding-top: 10px;
+    border-radius: 10px !important;
+    width: 100px !important;
+    cursor: pointer;
+}
+.prev-step-btn,
+.next-step-btn,
+.add-new-q,
+.final-registion{
+    background-color: #777;
+    color: #fff;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+.add-new-q{
+    background-color:#0085FF;
+    padding-top: 0px !important;
+    outline: none;
+    border: 0;
+    border-radius: 25px;
+}
+.final-registion{
+    background-color: #60d965;
+    padding-top: 0px !important;
+    outline: none;
+    border: 0;
+    border-radius: 25px;
+}
+.prev-step-btn ul,
+.next-step-btn ul{
+    text-align: center;
+}
+.next-step-btn{
+    background-color: #60d965 !important;
+}
+.btns-ul{
+    text-align: center;
+    margin-top: 30px;
+}
+.choose-q-type ul{
+    background-color: #777777;
+    border-radius: 25px;
+    /* padding: 10px; */
+    color: #fff;
+    font-size: 12px;
+}
+.choose-q-type ul li{
+    padding: 10px;
+}
+.chooosen-type-q{
+    background-color: #0085ff;
+    border-radius: 25px;
+}
+.choose-q-type{
+    margin-top: 10px;
+}
+.typing-q-textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 15px;
+    border-color: #000;
+    outline: none;
+    padding: 10px;
+    height: 50px;
+}
+.option-input{
+    width: 100%;
+    margin: 0 15px;
+    border-radius: 25px;
+    outline: none;
+    height: 35px;
+    border: 1px solid;
+    padding: 10px;
+}
+.add-new-option-btn{
+    margin: 15px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    padding: 9px;
+    font-size: 13px;
+    border-radius: 25px;
+    cursor: pointer;
+}
