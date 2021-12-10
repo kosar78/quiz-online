@@ -68,7 +68,9 @@ $(document).ready(function () {
             img2 = document.createElement("img");
             a = document.createElement("a");
             p = document.createElement("p");
-            p.className = "course-student-btn";
+            t = d + 1;
+            p_class = "course-student-btn" + t;
+            p.classList = "course-student-btn " + p_class;
             td2.className = "course-title-td";
             td3.className = "teacher-course-title-td";
             ul.className = "edit-delete";
@@ -98,7 +100,7 @@ $(document).ready(function () {
             tr.appendChild(td4);
             tr.appendChild(td5);
             document.getElementById("list").appendChild(tr);
-            $(".course-student-btn").click(function () {
+            $(".course-student-btn" + t).click(function () {
               $("#student-table tbody tr").remove();
               document.getElementById("empty-list-student").innerHTML = "";
               var courseName = $(this).parent().parent().children(".course-title-td").text();
@@ -186,6 +188,8 @@ $(document).ready(function () {
             var img2;
             var a;
             var p;
+            var t;
+            var p_class;
             var td1_text;
             var td2_text;
             var td3_text;
