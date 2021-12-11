@@ -155,5 +155,6 @@
     outline: none;
 }
 .barom:focus{
-    border-color: #0085FF !important;
+    outline-color: #0085FF !important;
+    outline: auto !important;
 }

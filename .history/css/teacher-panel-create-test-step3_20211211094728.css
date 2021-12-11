@@ -152,8 +152,5 @@
     height: 35px;
     border: 1px solid rgb(0,0,0,.5);
     padding: 5px 10px;
-    outline: none;
-}
-.barom:focus{
-    border-color: #0085FF !important;
+
 }
