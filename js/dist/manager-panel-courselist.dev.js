@@ -28,32 +28,15 @@ $(document).ready(function () {
           var user_array = res.data.data;
 
           var _loop = function _loop(d) {
-            // let course_students_id=course_array[d].studentIds;
-            // let student_array=[]
             var course_teacher_id = course_array[d].profId;
             var teacher_fullName = "";
             var k = 0;
 
             for (var i = 0; i < user_array.length; i++) {
-              // if(user_array[i].role=="student"){
-              //     student_array[j]=user_array[i]
-              //     j=j+1
-              // }
-              // else 
               if (user_array[i].role == "teacher" && user_array[i].id == course_teacher_id) {
                 teacher_fullName = user_array[i].fullName;
               }
-            } // console.log()
-            // for(let c=0;c<j;c++){
-            //     for(let b=0;b<course_students_id.length;b++){
-            //         if(student_array[c].id==course_students_id[b]){
-            //             course_students_array=student_array[c]
-            //         }
-            //     }
-            // }
-            // console.log(course_students_id)
-            // $("#student-table tbody tr").remove()
-
+            }
 
             tr = document.createElement("tr");
             td1 = document.createElement("td");
@@ -149,8 +132,7 @@ $(document).ready(function () {
 
                     for (var _a = 0; _a < studentIds_array.length; _a++) {
                       _loop2(_a);
-                    } // $("#student-table tbody tr").remove()
-
+                    }
 
                     break;
                   }
@@ -158,7 +140,7 @@ $(document).ready(function () {
               }
 
               $("#students-course-list").modal("toggle");
-              console.log(k); // k=0
+              console.log(k);
             });
             $(".delete-from-list").click(function () {
               $("#deleteCourse").modal("hide");

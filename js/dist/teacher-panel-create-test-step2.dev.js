@@ -35,6 +35,7 @@ $(document).ready(function () {
       }
     });
   });
+  $("#file-date-access").pDatepicker();
   $(".upload-file-icon").click(function () {
     $("#fileInp").trigger('click');
   });
