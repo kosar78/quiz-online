@@ -1,0 +1,137 @@
+.cancel{
+    padding-top: 10px;
+    border-radius: 10px !important;
+    width: 100px !important;
+    cursor: pointer;
+}
+.prev-step-btn,
+.next-step-btn,
+.add-new-q,
+.final-registion{
+    background-color: #777;
+    color: #fff;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+.add-new-q{
+    background-color:#0085FF;
+    padding-top: 0px !important;
+    outline: none;
+    border: 0;
+    border-radius: 25px;
+}
+.final-registion{
+    background-color: #60d965;
+    padding-top: 0px !important;
+    outline: none;
+    border: 0;
+    border-radius: 25px;
+}
+.prev-step-btn ul,
+.next-step-btn ul{
+    text-align: center;
+}
+.next-step-btn{
+    background-color: #60d965 !important;
+}
+.btns-ul{
+    text-align: center;
+    margin-top: 30px;
+}
+.choose-q-type ul,
+.choose-a-type ul{
+    background-color: #777777;
+    border-radius: 25px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.choose-q-type ul li,
+.choose-a-type ul li{
+    padding: 10px;
+}
+.choosen-type-q,
+.choosen-type-a{
+    background-color: #0085ff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+.choose-q-type,
+.choose-a-type{
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+}
+.typing-q-textarea,
+.typing-a-textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 15px;
+    border-color: rgb(0,0,0,.5);
+    outline: none;
+    padding: 10px;
+    height: 50px;
+}
+.option-input{
+    width: 100%;
+    margin: 0 15px;
+    border-radius: 25px;
+    outline: none;
+    height: 35px;
+    border: 1px solid rgb(0,0,0,.5);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.option-input:focus{
+    border-color: #0085FF;
+}
+.typing-q-textarea:focus{
+    border-color: #0085FF;
+}
+.add-new-option-btn,
+.delete-last-option-btn{
+    margin: 15px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    padding: 9px;
+    font-size: 13px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.q-options{
+    width: max-content;
+    margin: 15px 25px;
+}
+.q-option{
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    padding: 1px;
+    cursor: pointer;
+    width: 28px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+.q-option:hover{
+    background-color: #60d965;
+    color: #fff;
+}
+.uploading-pic-q,
+.typing-text-q{
+    cursor: pointer;
+}
+.placing-img{
+    margin-right: 0 !important;
+}
+.placing-img img{
+    width: 40%;
+}
+.imgInp{
+    display: none;
+}
