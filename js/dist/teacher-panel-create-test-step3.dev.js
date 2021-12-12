@@ -1,6 +1,23 @@
 "use strict";
 
 $(document).ready(function () {
+  // console.log(localStorage)
+  var localStorage_Array3 = localStorage.toggled.split("|");
+  localStorage.toggled = localStorage_Array3[0]; // let examId=localStorage_Array3[1]
+
+  var examId = 11;
+  axios.get('http://localhost:3000/api/v1/user/my', {
+    headers: {
+      'Authorization': "Bearer ".concat(localStorage.toggled)
+    }
+  }).then(function (res) {
+    console.log('get : ');
+    console.log(res.data.data.fullName);
+    document.getElementById("fullname").innerHTML = res.data.data.fullName;
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+  console.log(examId);
   $(".add-new-q").click(function () {
     var c = $(".main-row-left").children(".new-q").length + 1;
     var div1 = document.createElement("div");
@@ -39,7 +56,8 @@ $(document).ready(function () {
     var ul5_input = document.createElement("input");
     var div9 = document.createElement("div");
     var img3 = document.createElement("img");
-    div1.classList = "col-xl-12 new-q";
+    var div1_class = "new-q" + c;
+    div1.classList = "col-xl-12 new-q " + div1_class;
     var div6_class = "placing-img" + c;
     div6.classList = "row placing-img " + div6_class;
     p1.className = "title-tx";
@@ -53,7 +71,8 @@ $(document).ready(function () {
     ul1_li1_input.setAttribute("id", "imgInp" + c);
     div4.classList = "row typing-q";
     p2.className = "top-input";
-    textarea1.className = "typing-q-textarea";
+    var tx1_class = "typing-q-textarea" + c;
+    textarea1.classList = "typing-q-textarea " + tx1_class;
     p3.className = "title-tx";
     input1.classList = "option-input option-input1";
     input2.classList = "option-input option-input2";
@@ -69,9 +88,9 @@ $(document).ready(function () {
     div7.classList = "row answer";
     p4.classList = "title-tx";
     var textarea2_class = "typing-a-textarea" + c;
-    textarea2.classList = "typing-a-textarea " + textarea2_class;
-    var div8_class = "choose-a-type" + c;
-    div8.classList = "row choose-a-type " + div8_class;
+    textarea2.classList = "typing-a-textarea " + textarea2_class; // var div8_class="choose-a-type"+c
+
+    div8.classList = "row choose-a-type";
     var ul5_input_class = "imgInp-answer" + c;
     ul5_input.classList = "imgInp-answer " + ul5_input_class;
     var ul5_li1_class = "choosen-type-a" + c;
@@ -160,7 +179,7 @@ $(document).ready(function () {
       });
     });
     $(".q-option" + c).click(function () {
-      $(".q-option").removeClass("clicked-on-answer");
+      $(".q-option" + c).removeClass("clicked-on-answer");
       $(this).addClass("clicked-on-answer");
     });
     $(".delete-last-option-btn" + c).click(function () {
@@ -183,8 +202,6 @@ $(document).ready(function () {
     });
 
     function readURL(input) {
-      console.log(input);
-
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -198,8 +215,6 @@ $(document).ready(function () {
     }
 
     function readURLA(input) {
-      console.log(input);
-
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -211,6 +226,50 @@ $(document).ready(function () {
         reader.readAsDataURL(input.files[0]);
       }
     }
+
+    $(".final-registion").click(function () {
+      // console.log(c)
+      var c2 = c - 1;
+
+      for (var i = 1; i <= c; i++) {
+        var questionPic = $(".placing-img" + i + " img").attr("src");
+        var answerPic = $(".placing-img-a" + i + " img").attr("src");
+        var quesoptions = {};
+        var q = 0;
+        var a = 0;
+        var answoptions = {};
+        var ResponseTime = 0;
+        var Score = 0;
+        var face = $(".typing-q-textarea" + i).val();
+        var desc = $(".typing-a-textarea" + i).val();
+        var count = $(".new-q" + i).children(".q-options").children().length;
+
+        for (var j = 1; j <= count; j++) {
+          quesoptions[q] = $(".new-q" + i).children(".typing-q").children(".option-input" + i).val();
+          q++;
+        } // for(var z=1;z<=count;z++){
+
+
+        if ($(".new-q" + i).children(".q-options").children("q-option" + i).hasClass("clicked-on-answer")) {
+          answoptions[a] = $(".new-q" + i).children(".q-options").children("q-option" + i).hasClass("clicked-on-answer").val();
+        } // }
+        // console.log(questionPic)
+
+
+        var question = {
+          examId: examId,
+          questionPic: questionPic,
+          answerPic: answerPic,
+          quesoptions: quesoptions,
+          answoptions: answoptions,
+          ResponseTime: ResponseTime,
+          desc: desc,
+          Score: Score,
+          face: face
+        };
+        console.log(question);
+      }
+    });
   });
   $(".uploading-pic-q").click(function () {
     $(this).addClass("choosen-type-q");

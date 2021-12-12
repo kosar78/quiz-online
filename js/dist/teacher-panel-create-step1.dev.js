@@ -230,6 +230,9 @@ $(document).ready(function () {
 
         if (ms == "آزمون شما با موفقیت ساخته شد") {
           document.getElementById("message").style.color = "#16a085";
+          var token = localStorage.toggled;
+          localStorage.toggled = token + "|" + res.data.data.id;
+          console.log(localStorage);
           window.location.href = "teacher-panel-create-test-step3.html";
         }
 

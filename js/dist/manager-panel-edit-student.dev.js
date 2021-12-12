@@ -1,19 +1,19 @@
 "use strict";
 
-var localStorage_Array = localStorage.toggled.split("|");
-localStorage.toggled = localStorage_Array[0];
-var studentId = localStorage_Array[1];
-var pass = "";
+var localStorage_Array2 = localStorage.toggled.split("|");
+localStorage.toggled = localStorage_Array2[0];
+var studentId = localStorage_Array2[1];
+var pass2 = "";
 axios.get('http://localhost:3000/api/v1/user/my', {
   headers: {
-    'Authorization': "Bearer ".concat(localStorage_Array[0])
+    'Authorization': "Bearer ".concat(localStorage_Array2[0])
   }
 }).then(function (res) {
   console.log('get : ');
   console.log(res.data.data.fullName);
   document.getElementById("fullname").innerHTML = res.data.data.fullName;
   var save = document.querySelector('#save-student-info');
-  console.log(localStorage_Array);
+  console.log(localStorage_Array2);
   axios.get('http://localhost:3000/api/v1/user/getUserById/' + studentId, {
     headers: {
       'Authorization': "Bearer ".concat(localStorage.toggled)
@@ -35,8 +35,8 @@ axios.get('http://localhost:3000/api/v1/user/my', {
     document.querySelector('#lastname').value = LastName_sum;
     document.querySelector('#username').value = res.data.data.username;
     document.querySelector('#email').value = res.data.data.email;
-    pass = res.data.data.password;
-    console.log(pass);
+    pass2 = res.data.data.password;
+    console.log(pass2);
   })["catch"](function (err) {
     return console.log(err);
   });
@@ -51,11 +51,11 @@ axios.get('http://localhost:3000/api/v1/user/my', {
     var admin = {};
 
     if (password == "") {
-      console.log(pass);
+      console.log(pass2);
       admin = {
         id: studentId,
         fullName: firstName + " " + lastName,
-        password: pass,
+        password: pass2,
         username: username,
         email: email
       };
