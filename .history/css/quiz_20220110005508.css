@@ -1,0 +1,239 @@
+@font-face {
+    font-family: FirstFont;
+    src:url(../font/Vazir-Medium.woff2) format('woff2');
+    src:url(../font/Vazir-Medium-FD-WOL.woff2) format('woff2');
+  }
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    text-align: right;
+    text-decoration:none;
+}
+html body {
+    direction: rtl;
+    font-family:FirstFont;
+    text-align: center;
+    /* background: linear-gradient(260.06deg, #363671 12.33%, #3E5196 57.46%); */
+    /* height: 100vh; */
+    background-color: #eee;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+}
+.headerr{
+    background-color: #3E5196;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    padding: 20px;
+    font-size: 17px;
+}
+.quiz-details,
+.question-box,
+.quiz-timer,
+.answer-form{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 20px !important;
+    position: relative;
+    margin: 20px 0;
+}
+.quiz-details ul li ul{
+    margin-left: 25px;
+    font-size: 15px;
+}
+.q-info-title{
+    color: rgb(0, 0, 0,.5);
+}
+.exam-title-div{
+    background-color:#0091E2;
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 15px !important;
+    position: relative;
+    margin: 20px 0;
+}
+.exam-title-div p{
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 0px;
+
+}
+.question-box .q-pic{
+    max-width: 300px;
+}
+.question-box .q-options label{
+    margin-left: 30px;
+    margin-right: 5px;
+}
+.question-number{
+    background-color: #EE537C;
+    /* padding: 3px 8px; */
+    width: 25px;
+    margin-left: 15px;
+    color: #fff;
+    padding-top: 2px;
+    text-align: center;
+
+}
+.q-options{
+    margin-top: 15px;
+    position: relative;
+    margin-bottom: 0;
+}
+.q-options input{
+    width: 20px;
+    position: relative;
+    height: 20px;
+    top: 6px;
+
+}
+::placeholder {
+    color: rgb(0, 0, 0,.5);
+    opacity: 0.95; 
+  }
+  
+:-ms-input-placeholder { 
+    color: rgb(0, 0, 0,.5);
+}
+  
+::-ms-input-placeholder { 
+    color: rgb(0, 0, 0,.5);
+}
+
+@media(max-width:335px){
+    #password,
+    #username,
+    #confirm-password,
+    #code{
+        width: 84%;
+    }
+    
+}
+.base-timer {
+    position: relative;
+    width: 122px;
+    height: 122px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: #EEEEEE;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: #3E5196;
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: #CC2A3A;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  #app{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+  }
+  #white-answer-check{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 6px;
+  }
+#label-check-white-answer{
+    font-size: 14px;
+    margin-right: 5px;
+}
+.quiz-timer,
+.quiz-timer div{
+    text-align: center;
+}
+#end-quiz-btn{
+    width: 150px;
+    outline: none;
+    /* margin-bottom: 20px; */
+    border: 0;
+    text-align: center;
+    color: #FFFFFF;
+    background: #EE537C;
+    border-radius: 25px;
+    height: 40px;
+    font-size: 14px;
+}
+#end-quiz-btn:hover{
+    background:#d84c71 !important;
+    color:#f6f6f6 !important;
+}
+.answer-form .exam-title-div{
+    background-color: #0091E2;
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 5px !important;
+    position: relative;
+    margin: 10px 0 20px 0;
+}
+.a-form-title{
+    text-align: center;
+    margin-bottom: 0;
+    color: #EE537C;
+    font-weight: 600;
+}
+.q-num{
+    font-weight: 600;
+}
+.q-option{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
+    text-align: center;
+    padding-top: 4px;
+    margin-right: 10px;
+}

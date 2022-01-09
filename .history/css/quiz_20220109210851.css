@@ -1,0 +1,79 @@
+@font-face {
+    font-family: FirstFont;
+    src:url(../font/Vazir-Medium.woff2) format('woff2');
+    src:url(../font/Vazir-Medium-FD-WOL.woff2) format('woff2');
+  }
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    text-align: right;
+    text-decoration:none;
+}
+html body {
+    direction: rtl;
+    font-family:FirstFont;
+    text-align: center;
+    /* background: linear-gradient(260.06deg, #363671 12.33%, #3E5196 57.46%); */
+    /* height: 100vh; */
+    background-color: #eee;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+}
+.headerr{
+    background-color: #3E5196;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    padding: 20px;
+    font-size: 17px;
+}
+.quiz-details{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 20px !important;
+    position: relative;
+    margin: 20px 0;
+}
+.quiz-details ul li ul{
+    margin-left: 25px;
+    font-size: 15px;
+}
+.q-info-title{
+    color: rgb(0, 0, 0,.5);
+}
+.exam-title-div{
+
+}
+::placeholder {
+    color: rgb(0, 0, 0,.5);
+    opacity: 0.95; 
+  }
+  
+:-ms-input-placeholder { 
+    color: rgb(0, 0, 0,.5);
+}
+  
+::-ms-input-placeholder { 
+    color: rgb(0, 0, 0,.5);
+}
+
+@media(max-width:335px){
+    #password,
+    #username,
+    #confirm-password,
+    #code{
+        width: 84%;
+    }
+    
+}

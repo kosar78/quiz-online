@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="bootstrap_files/css/bootstrap.min.css">
+    <script type="text/javascript" src="JQuery_file/jQuery.js"></script>
+    <script type="text/javascript" src="bootstrap_files/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/quiz-timer.js"></script>
+    <title>امتحان</title>
+</head>
+<body>
+    <div class="container-fluid signin-container">
+        <div class="row main-row">
+            <div class="headerr">کوییز آنلاین</div>
+
+            <div class="col-xl-9">
+                <div class="quiz-details">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li class="q-info-title">نام کاربر :</li>
+                                <li>کوثر حسینی</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="q-info-title">عنوان آزمون :</li>
+                                <li>آزمون ریاضی</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="q-info-title">زمان آزمون :</li>
+                                <li>120 دقیقه</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li class="q-info-title">تعداد سوال :</li>
+                                <li>4</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="exam-title-div">
+                    <p class="exam-title">
+                        آزمون ریاضی
+                    </p>
+                </div>
+
+
+                <div class="question-box">
+                    <ul>
+                        <li class="question-number">1</li>
+                        <li class="question-face">حاصل ضرب 4 در 5 کدام است؟</li>
+                    </ul>
+                    <img src="" alt="" class="q-pic">
+
+                    <ul class="q-options">
+                        <li>
+                            <input type="radio" id="contactChoice1" name="answer" value="1" >
+                        <label for="contactChoice1">جواب میشه 20</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contactChoice2" name="answer" >
+                            <label for="contactChoice2">جواب میشود 9</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contactChoice3" name="answer" >
+                            <label for="contactChoice3">جواب 9</label>
+                        </li>                        
+                        <li>
+                            <input type="radio" id="contactChoice4" name="answer" >
+                            <label for="contactChoice4">0</label>
+                        </li>
+                        
+
+                        
+                    </ul>
+                </div>
+
+                <div class="question-box">
+                    <ul>
+                        <li class="question-number">2</li>
+                        <li class="question-face">حاصل ضرب 4 در 5 کدام است؟</li>
+                    </ul>
+                    <img src="" alt="" class="q-pic">
+
+                    <ul class="q-options">
+                        <li>
+                            <input type="radio" id="contactChoice1" name="answer" value="1" >
+                        <label for="contactChoice1">جواب میشه 20</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contactChoice2" name="answer" >
+                            <label for="contactChoice2">جواب میشود 9</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="contactChoice3" name="answer" >
+                            <label for="contactChoice3">جواب 9</label>
+                        </li>                        
+                        <li>
+                            <input type="radio" id="contactChoice4" name="answer" >
+                            <label for="contactChoice4">0</label>
+                        </li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="quiz-timer">
+                    <div id="app">
+                        
+                    </div>
+
+                    <input type="checkbox" name="" id="white-answer-check">
+                    <label for="white-answer" id="label-check-white-answer">گزینه های بی پاسخ</label>
+
+                    <div>
+                        <input id="end-quiz-btn" type="button" value="اتمام آزمون">
+                    </div>
+                </div>
+
+                <div class="answer-form">
+                    <p class="a-form-title">پاسخنامه</p>
+                    <div class="exam-title-div">
+                        <p >
+                            آزمون ریاضی
+                        </p>
+                    </div>
+
+                    <ul class="answer-option-unclicked">
+                        <li class="q-num">1</li>
+                        <li class="q-option">1</li>
+                        <li class="q-option">2</li>
+                        <li class="q-option">3</li>
+                        <li class="q-option">4</li>
+                    </ul>
+                    <ul class="answer-option-clicked">
+                        <li class="q-num">2</li>
+                        <li class="q-option">1</li>
+                        <li class="q-option answered">2</li>
+                        <li class="q-option">3</li>
+                        <li class="q-option">4</li>
+                    </ul>
+                    <ul class="answer-option-unclicked">
+                        <li class="q-num">3</li>
+                        <li class="q-option">1</li>
+                        <li class="q-option">2</li>
+                        <li class="q-option">3</li>
+                        <li class="q-option">4</li>
+                        
+                    </ul>
+                    <ul class="answer-option-clicked">
+                        <li class="q-num">4</li>
+                        <li class="q-option">1</li>
+                        <li class="q-option">2</li>
+                        <li class="q-option">3</li>
+                        <li class="q-option">4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <!-- <script src="./connectToDB/signUp.js"></script> -->
+    
+</body>
+</html>
