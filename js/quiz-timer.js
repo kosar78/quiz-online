@@ -114,4 +114,32 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+
+
+        $(".choosen-type-a").click(function(){
+            var s=".imgInp-answer"
+            $(s).trigger("click");
+            
+            
+        })
+        $(".imgInp-answer").on("change",function(){
+            
+            readURLA(this);
+        });
+       
+        function readURLA(input) {
+            console.log(input)
+            file_img=input.files
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var file = input.files[0];
+                    
+                    $(".placing-img-a"+" img").attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
 })
