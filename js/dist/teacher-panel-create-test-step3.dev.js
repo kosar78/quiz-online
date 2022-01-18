@@ -2,10 +2,12 @@
 
 $(document).ready(function () {
   // console.log(localStorage)
+  var file_img = "";
   var localStorage_Array3 = localStorage.toggled.split("|");
-  localStorage.toggled = localStorage_Array3[0]; // let examId=localStorage_Array3[1]
+  localStorage.toggled = localStorage_Array3[0];
+  var examId = Number(localStorage_Array3[1]);
+  examId = parseInt(examId); // let examId=11
 
-  var examId = 11;
   axios.get('http://localhost:3000/api/v1/user/my', {
     headers: {
       'Authorization': "Bearer ".concat(localStorage.toggled)
@@ -202,6 +204,8 @@ $(document).ready(function () {
     });
 
     function readURL(input) {
+      file_img = input.files;
+
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -215,6 +219,8 @@ $(document).ready(function () {
     }
 
     function readURLA(input) {
+      file_img = input.files;
+
       if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -226,50 +232,82 @@ $(document).ready(function () {
         reader.readAsDataURL(input.files[0]);
       }
     }
+  });
+  $("#final-registion").click(function () {
+    var c = $(".main-row-left").children(".new-q").length;
+    console.log(c);
 
-    $(".final-registion").click(function () {
-      // console.log(c)
-      var c2 = c - 1;
+    for (var i = 0; i < c; i++) {
+      var i2 = i + 1; // var questionPic=$(".placing-img"+i2+" img").attr("src");
+      // if(questionPic==undefined){
+      //     questionPic=""
+      // }
+      // var answerPic=$(".placing-img-a"+i2+" img").attr("src");
+      // if(answerPic==undefined){
+      //     answerPic=""
+      // }
 
-      for (var i = 1; i <= c; i++) {
-        var questionPic = $(".placing-img" + i + " img").attr("src");
-        var answerPic = $(".placing-img-a" + i + " img").attr("src");
-        var quesoptions = {};
-        var q = 0;
-        var a = 0;
-        var answoptions = {};
-        var ResponseTime = 0;
-        var Score = 0;
-        var face = $(".typing-q-textarea" + i).val();
-        var desc = $(".typing-a-textarea" + i).val();
-        var count = $(".new-q" + i).children(".q-options").children().length;
+      var quesoptions = [];
+      var q = 0;
+      var a = 0;
+      var answoptions = "";
+      var ResponseTime = 0;
+      var Score = 0;
+      var face = $(".typing-q-textarea" + i2).val();
+      var desc = $(".typing-a-textarea" + i2).val();
+      var count = $(".new-q" + i2).children(".q-options").children().length;
 
-        for (var j = 1; j <= count; j++) {
-          quesoptions[q] = $(".new-q" + i).children(".typing-q").children(".option-input" + i).val();
-          q++;
-        } // for(var z=1;z<=count;z++){
-
-
-        if ($(".new-q" + i).children(".q-options").children("q-option" + i).hasClass("clicked-on-answer")) {
-          answoptions[a] = $(".new-q" + i).children(".q-options").children("q-option" + i).hasClass("clicked-on-answer").val();
-        } // }
-        // console.log(questionPic)
+      for (var j = 1; j <= count; j++) {
+        quesoptions[q] = $(".new-q" + i2).children(".typing-q").children(".option-input" + j).val();
+        q++;
+      } // var console_check=$(".new-q"+i2).children(".q-options").children(".q-option"+i2).hasClass("clicked-on-answer")
+      // for(var z=1;z<=count;z++){
 
 
-        var question = {
-          examId: examId,
-          questionPic: questionPic,
-          answerPic: answerPic,
-          quesoptions: quesoptions,
-          answoptions: answoptions,
-          ResponseTime: ResponseTime,
-          desc: desc,
-          Score: Score,
-          face: face
-        };
-        console.log(question);
-      }
-    });
+      if ($(".new-q" + i2).children(".q-options").children(".q-option" + i2).hasClass("clicked-on-answer")) {
+        answoptions = $(".new-q" + i2).children(".q-options").children(".clicked-on-answer").text();
+      } // }
+
+
+      var answer = parseInt(answoptions);
+      console.log(answer);
+      var question = {
+        examId: examId,
+        // questionPic:questionPic,
+        // answerPic:answerPic,
+        quesoptions: quesoptions,
+        answoptions: answer,
+        // ResponseTime:ResponseTime,
+        desc: desc,
+        Score: Score,
+        face: face
+      };
+      console.log(question);
+      axios.post('http://localhost:3000/api/v1/question/create', question, {
+        headers: {
+          'Authorization': "Bearer ".concat(localStorage.toggled)
+        }
+      }).then(function (res) {
+        console.log('post : ');
+        console.log(res.data);
+        var ms = res.data; // document.getElementById("message").style.color = "#d24d57";
+        // if(res.data.message!="آزمون شما با موفقیت ساخته شد"){
+        // }
+        // if(ms=="آزمون شما با موفقیت ساخته شد"){
+        // document.getElementById("message").style.color = "#16a085";
+        // var token=localStorage.toggled
+        // localStorage.toggled=token+"|"+res.data.data.id
+        // console.log(localStorage)
+        // window.location.href = "teacher-panel-create-test-step3.html";
+        // }
+        // document.querySelector('#message').innerHTML=ms;
+      })["catch"](function (err) {
+        return console.log(err);
+      });
+      window.location.href = "teacher-panel-testslist.html"; // console.log(console_check)
+
+      console.log(question);
+    }
   });
   $(".uploading-pic-q").click(function () {
     $(this).addClass("choosen-type-q");

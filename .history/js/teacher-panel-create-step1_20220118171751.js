@@ -232,7 +232,7 @@ $(document).ready(function(){
                 arrange_Q:arrange_Q,
                 backtoQuestion:backtoQuestion,
                 quizTime:quizTime,
-                numfQuestion:q_num
+                numfQuestion:
 
                 
             }

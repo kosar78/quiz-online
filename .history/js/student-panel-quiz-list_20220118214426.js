@@ -111,9 +111,9 @@ $(document).ready(function(){
             $(".main-row-left").append(divquizbox)
 
             $(".start-the-test"+c).click(function(){
-                // var now = new Date();
-                // var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-                // console.log(time)
+                var now = new Date();
+                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                console.log(time)
                 var quiz_title =$(this).parent().parent().parent().children(".head-quiz-box").text()
                 var quizId=0
                 var quiztype="تستی"

@@ -65,7 +65,7 @@ $(document).ready(function () {
       var ul5_li2_text = document.createTextNode(" داده نشده است.");
       var ul1_li2_text = document.createTextNode("در تاریخ " + studentTestsArray[i].start_date + " در ساعت " + studentTestsArray[i].start_time);
       var ul2_li2_text = document.createTextNode("در تاریخ " + studentTestsArray[i].end_date + " در ساعت " + studentTestsArray[i].end_time);
-      var ul3_li2_text = document.createTextNode("120 دقیقه");
+      var ul3_li2_text = document.createTextNode(studentTestsArray[i].quizTime + " دقیقه");
       var quiztype = "تستی";
 
       if (studentTestsArray[i].testordesc == true) {
@@ -108,9 +108,9 @@ $(document).ready(function () {
       divquizbox.appendChild(ul6);
       $(".main-row-left").append(divquizbox);
       $(".start-the-test" + c).click(function () {
-        var now = new Date();
-        var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-        console.log(time);
+        // var now = new Date();
+        // var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        // console.log(time)
         var quiz_title = $(this).parent().parent().parent().children(".head-quiz-box").text();
         var quizId = 0;
         var quiztype = "تستی";
@@ -126,8 +126,7 @@ $(document).ready(function () {
         }
 
         axios.post('http://localhost:3000/api/v1/examSheet/create', {
-          examId: quizId,
-          start_time: time
+          examId: quizId
         }, {
           headers: {
             'Authorization': "Bearer ".concat(localStorage.toggled)
@@ -135,23 +134,22 @@ $(document).ready(function () {
         }).then(function (res) {
           console.log('post : ');
           console.log(res.data.data);
-          var result = res.data.data;
+          var result = res.data.data; // if(result.remainingTime!=0){
 
-          if (result.remainingTime != 0) {
-            var token = {
-              token: localStorage.toggled
-            };
-            var finalResult = Object.assign(result, token); // localStorage.toggled=new Object();
+          var token = {
+            token: localStorage.toggled
+          };
+          var finalResult = Object.assign(result, token); // localStorage.toggled=new Object();
 
-            finalResult = JSON.stringify(finalResult);
-            localStorage.toggled = finalResult; // console.log(localStorage.toggled)
+          finalResult = JSON.stringify(finalResult);
+          localStorage.toggled = finalResult; // console.log(localStorage.toggled)
 
-            if (quiztype == "تستی") {
-              window.location.href = "quiz.html";
-            } else if (quiztype == "تشریحی") {
-              window.location.href = "quiz-tashrihi.html";
-            }
-          }
+          if (quiztype == "تستی") {
+            window.location.href = "quiz.html";
+          } else if (quiztype == "تشریحی") {
+            window.location.href = "quiz-tashrihi.html";
+          } // }
+
         })["catch"](function (err) {
           return console.log(err);
         });

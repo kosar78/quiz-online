@@ -196,7 +196,7 @@ $(document).ready(function () {
         courseId: CourseId,
         title: test_title,
         // Archive:false,
-        testordesc: false,
+        testordesc: true,
         // questionType:questionTypeTorF,
         // mines:minesTorF,
         review: reviewTorF,
@@ -235,7 +235,7 @@ $(document).ready(function () {
           var token = localStorage.toggled;
           localStorage.toggled = token + "|" + res.data.data.id;
           console.log(localStorage);
-          window.location.href = "teacher-panel-create-test-step3.html";
+          window.location.href = "teacher-panel-create-test-step3-tashrihi.html";
         }
 
         document.querySelector('#message').innerHTML = ms;

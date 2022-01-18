@@ -111,9 +111,9 @@ $(document).ready(function(){
             $(".main-row-left").append(divquizbox)
 
             $(".start-the-test"+c).click(function(){
-                // var now = new Date();
-                // var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-                // console.log(time)
+                var now = new Date();
+                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                console.log(time)
                 var quiz_title =$(this).parent().parent().parent().children(".head-quiz-box").text()
                 var quizId=0
                 var quiztype="تستی"
@@ -127,8 +127,8 @@ $(document).ready(function(){
                 }
 
                 axios.post('http://localhost:3000/api/v1/examSheet/create',{
-                    examId:quizId
-                   
+                    examId:quizId,
+                    start_time:time
                 },{
                 headers: {
                     'Authorization' : `Bearer ${localStorage.toggled}`
@@ -138,7 +138,7 @@ $(document).ready(function(){
                     console.log('post : ')
                     console.log(res.data.data);
                     var result=res.data.data
-                    // if(result.remainingTime!=0){
+                    if(result.remainingTime!=0){
 
                         var token={
                             token:localStorage.toggled
@@ -158,7 +158,7 @@ $(document).ready(function(){
                             window.location.href = "quiz-tashrihi.html";
                         }
                         
-                    // }
+                    }
                     
                 } )
                 .catch(err => console.log(err))

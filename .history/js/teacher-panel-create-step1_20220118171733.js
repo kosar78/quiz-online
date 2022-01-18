@@ -207,7 +207,7 @@ $(document).ready(function(){
                 var endTestTime=eYear+"/"+emonth+"/"+eDay
                 
 
-                q_num=parseInt(q_num)
+                
             var exam={
                 courseId:CourseId,
                 title:test_title,

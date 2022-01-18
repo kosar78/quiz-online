@@ -23,8 +23,6 @@ $(document).ready(function(){
             let course_name=document.querySelector('#courses').value
             let start_test_time=document.querySelector('#start-test-time').value
             let end_test_time=document.querySelector('#end-test-time').value
-            let quizTime=document.querySelector('#test-time').value
-            let q_num=document.querySelector('#test-q-num').value
             var CourseId
             var questionTypeTorF=false
             var minesTorF=false
@@ -40,7 +38,7 @@ $(document).ready(function(){
             var timeForAnyQuestion=false
             var arrange_Q=false
             var backtoQuestion=false
-            
+            var quizTime=0
             if($("#type1 .circle-2").hasClass("choosed")){
                 currentDateAndTime=true
                 numOfEnter=1
@@ -207,7 +205,7 @@ $(document).ready(function(){
                 var endTestTime=eYear+"/"+emonth+"/"+eDay
                 
 
-                q_num=parseInt(q_num)
+                
             var exam={
                 courseId:CourseId,
                 title:test_title,
@@ -217,7 +215,7 @@ $(document).ready(function(){
                 // mines:minesTorF,
                 review:reviewTorF,
                 start_date:startTestTime,
-                start_time:sHour+":00",
+                start_time:sHour,
                 end_date:endTestTime,
                 end_time:eHour+":00",
                 // currentDateAndTime:currentDateAndTime,
@@ -232,7 +230,7 @@ $(document).ready(function(){
                 arrange_Q:arrange_Q,
                 backtoQuestion:backtoQuestion,
                 quizTime:quizTime,
-                numfQuestion:q_num
+                numfQuestion:100
 
                 
             }

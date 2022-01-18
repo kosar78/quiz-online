@@ -169,6 +169,7 @@ $(document).ready(function(){
     .then(res =>{
         console.log(res.data)
         
+        $('#student-name').text(res.data.data.fullName)
        
     })
     .catch(err => console.log(err))  
