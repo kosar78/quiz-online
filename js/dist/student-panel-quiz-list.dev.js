@@ -32,8 +32,8 @@ $(document).ready(function () {
       var ul5_li1 = document.createElement("li");
       var ul5_li2 = document.createElement("li");
       var ul6_li1 = document.createElement("li");
-      var ul6_li2 = document.createElement("li");
-      var a1 = document.createElement("a");
+      var ul6_li2 = document.createElement("li"); // var a1=document.createElement("a");
+
       var starttest_btn = document.createElement("input");
       var review_btn = document.createElement("input");
       divquizbox.className = "quiz-box";
@@ -49,13 +49,14 @@ $(document).ready(function () {
       ul2_li2.className = "q-info";
       ul3_li2.className = "q-info";
       ul4_li2.className = "q-info";
-      ul5_li2.className = "q-info";
-      a1.href = "student-review-quiz-tests.html";
+      ul5_li2.className = "q-info"; // a1.href="student-review-quiz-tests.html"
+
       review_btn.value = "مرور";
       starttest_btn.value = "شرکت در آزمون";
       review_btn.type = "button";
       starttest_btn.type = "button";
       starttest_btn.className = "start-the-test" + c;
+      review_btn.className = "review-the-test" + c;
       var divhead_text = document.createTextNode(studentTestsArray[i].title);
       var ul1_li1_text = document.createTextNode("زمان برگزاری آزمون : ");
       var ul2_li1_text = document.createTextNode("زمان پایان آزمون : ");
@@ -94,10 +95,10 @@ $(document).ready(function () {
       ul4.appendChild(ul4_li2);
       ul5.appendChild(ul5_li1);
       ul5.appendChild(ul5_li2);
-      ul6_li1.appendChild(starttest_btn);
-      a1.appendChild(review_btn);
+      ul6_li1.appendChild(starttest_btn); // .appendChild(review_btn)
+
       ul6.appendChild(ul6_li1);
-      ul6_li2.appendChild(a1);
+      ul6_li2.appendChild(review_btn);
       ul6.appendChild(ul6_li2);
       divquizbox.appendChild(divhead);
       divquizbox.appendChild(ul1);
@@ -133,23 +134,96 @@ $(document).ready(function () {
           }
         }).then(function (res) {
           console.log('post : ');
-          console.log(res.data.data);
-          var result = res.data.data; // if(result.remainingTime!=0){
+          console.log(res.data);
+          var result = res.data.data;
 
-          var token = {
-            token: localStorage.toggled
-          };
-          var finalResult = Object.assign(result, token); // localStorage.toggled=new Object();
+          if (result == undefined) {
+            alert(res.data.message);
+          } else {
+            if (result.status == "not Finished") {
+              var token = {
+                token: localStorage.toggled
+              };
+              var finalResult = Object.assign(result, token); // localStorage.toggled=new Object();
 
-          finalResult = JSON.stringify(finalResult);
-          localStorage.toggled = finalResult; // console.log(localStorage.toggled)
+              finalResult = JSON.stringify(finalResult);
+              localStorage.toggled = finalResult; // console.log(localStorage.toggled)
 
-          if (quiztype == "تستی") {
-            window.location.href = "quiz.html";
-          } else if (quiztype == "تشریحی") {
-            window.location.href = "quiz-tashrihi.html";
-          } // }
+              if (quiztype == "تستی") {
+                window.location.href = "quiz.html";
+              } else if (quiztype == "تشریحی") {
+                window.location.href = "quiz-tashrihi.html";
+              }
+            } else {
+              alert("آزمون به اتمام رسیده است");
+            }
+          } // if(result.remainingTime!=0){
+          // }
 
+        })["catch"](function (err) {
+          return console.log(err);
+        });
+      });
+      $(".review-the-test" + c).click(function () {
+        // var now = new Date();
+        // var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        // console.log(time)
+        var quiz_title = $(this).parent().parent().parent().children(".head-quiz-box").text();
+        var quizId = 0;
+        var quiztype = "تستی";
+
+        for (var j = 0; j < studentTestsArray.length; j++) {
+          if (studentTestsArray[j].title == quiz_title) {
+            quizId = studentTestsArray[j].id;
+
+            if (studentTestsArray[j].testordesc == true) {
+              quiztype = "تشریحی";
+              console.log("kk");
+            }
+          }
+        }
+
+        axios.get('http://localhost:3000/api/v1/user/my', {
+          headers: {
+            'Authorization': "Bearer ".concat(localStorage.toggled)
+          }
+        }).then(function (res) {
+          axios.get('http://localhost:3000/api/v1/examSheet/get/' + quizId + "/" + res.data.data.id, {
+            headers: {
+              'Authorization': "Bearer ".concat(localStorage.toggled)
+            }
+          }).then(function (res) {
+            // console.log('post : ')
+            console.log(res.data);
+            var result = res.data.data;
+
+            if (result == undefined) {
+              alert(res.data.message);
+            } else {
+              // if(result.status=="not Finished"){
+              var token = {
+                token: localStorage.toggled
+              };
+              var finalResult = Object.assign(result, token); // localStorage.toggled=new Object();
+
+              finalResult = JSON.stringify(finalResult);
+              localStorage.toggled = finalResult; // console.log(localStorage.toggled)
+
+              if (quiztype == "تستی") {
+                window.location.href = "student-review-quiz-tests.html";
+              } else {
+                window.location.href = "student-review-quiz-tashrihi.html";
+              } // }
+              // else{
+              //     alert("آزمون به اتمام رسیده است")
+              // }
+
+            } // if(result.remainingTime!=0){
+            // }
+
+          })["catch"](function (err) {
+            return console.log(err);
+          });
         })["catch"](function (err) {
           return console.log(err);
         });
