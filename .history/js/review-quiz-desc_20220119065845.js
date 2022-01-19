@@ -69,7 +69,7 @@ $(document).ready(function(){
                 var questions=res.data.data
                 var c=1
                 for(var i=0;i<questions.length;i++){
-                    var answerChecked=0
+                    var answerChecked=""
                     var green=false
                     var red=false
                     var desc=""
@@ -77,74 +77,67 @@ $(document).ready(function(){
                     for(var a=0;a<examsheet.answers.length;a++){
                         
                         if(examsheet.answers[a].questionId==questions[i].id){
-                            answerChecked=examsheet.answers[a].ResponseTest
+                            answerChecked=examsheet.answers[a].ResponseDesc
                             console.log(answerChecked)
                         }
                     }
                     var divquestionbox=document.createElement("div");
                     var ul1=document.createElement("ul");
-                    var ul2=document.createElement("ul");
+                    // var ul2=document.createElement("ul");
                     var ul1_li1=document.createElement("li");
                     var ul1_li2=document.createElement("li");
                     
-                    var ul3=document.createElement("ul");
-                    ul3.className="answer-option-unclicked"
-                    var ul3_li1=document.createElement("li");
-                    ul3_li1.className="q-num"
-                    var ul3_li1_text=document.createTextNode(i+1);
-                    ul3_li1.appendChild(ul3_li1_text)
-                    ul3.appendChild(ul3_li1)
+                    
 
                     divquestionbox.className="question-box"
                     ul1_li1.className="question-number"
                     ul1_li2.className="question-face"
-                    ul2.className="q-options"
-
+                    // ul2.className="q-options"
+                    var textarea=document.createElement("textarea");
+                    
+                    textarea.className="answer-textarea"
+                    textarea.id="answer-textarea"+i2
+                    textarea.disabled=true
                     var ul1_li1_text = document.createTextNode(i+1);
                     var ul1_li2_text = document.createTextNode(questions[i].ques.face);
                     ul1_li1.appendChild(ul1_li1_text)
                     ul1_li2.appendChild(ul1_li2_text)
                     ul1.appendChild(ul1_li1)
                     ul1.appendChild(ul1_li2)
-                    for(var j=0;j<questions[i].ques.options.length;j++){
-                        
-                        var i2=i+1
-                        var j2=j+1
-                        var li=document.createElement("li");
-                        var input=document.createElement("input");
-                        var label=document.createElement("label");
-                        input.id="option"+i2+"-"+j2
-                        input.className="option"+c
-                        input.name="option"+i2
-                        input.type="radio"
-                        input.disabled=true
-                        if(j2==answerChecked){
-                            input.checked=true
-                            if(j2==questions[i].answer.options){
-                                green=true
-                            }
-                            else{
-                                red=true
-                                desc=questions[i].answer.desc
-                                currectOption=questions[i].answer.options
-                            }
-                        }
-                        label.setAttribute("for","option"+i2+"-"+j2)
-                        var label_text = document.createTextNode(questions[i].ques.options[j]);
-
-                        // var ul3_li=document.createElement("li");
-                        // ul3_li.className="q-option"
-                        // ul3_li.id="q-option"+i2+"-"+j2
-                        // var ul3_li_text = document.createTextNode(j2);
-                        // ul3_li.appendChild(ul3_li_text)
-                        // ul3.appendChild(ul3_li)
-
-                        label.appendChild(label_text)
-                        li.appendChild(input)
-                        li.appendChild(label)
-                        ul2.appendChild(li)
-
+                    var div=document.createElement("div");
+                    var p=document.createElement("p");
+                    p.className="message-for-view"
+                    if(answerChecked==questions[i].answer.desc){
+                        // green=true
+                        div.classList="teacher-answer-for-review correct-answer"
+                        var p_text = document.createTextNode("جواب شما صحیح است.");
+                        p.appendChild(p_text)
+                        div.appendChild(p)
                     }
+                    else{
+                        div.classList="teacher-answer-for-review incorrect-answer"
+                        var p_text = document.createTextNode("جواب شما غلط است.");
+                        p.appendChild(p_text)
+                        var p1=document.createElement("p");
+                        var p1_text = document.createTextNode("جواب صحیح :");
+                        p1.appendChild(p1_text)
+                        var p2=document.createElement("p");
+                        var p2_text = document.createTextNode(desc);
+                        p2.appendChild(p2_text)
+                        div.appendChild(p)
+                        div.appendChild(p1)
+                        div.appendChild(p2)
+                    }
+
+                    
+                    // if(green==true){
+                        
+                    // }
+                    // else if(red==true){
+                        
+                        
+                    // }
+                    
                     var div=document.createElement("div");
                     var p=document.createElement("p");
                     p.className="message-for-view"

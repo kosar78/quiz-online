@@ -110,14 +110,14 @@ $(document).ready(function(){
                         
                         var i2=i+1
                         var j2=j+1
-                        var li=document.createElement("li");
-                        var input=document.createElement("input");
-                        var label=document.createElement("label");
-                        input.id="option"+i2+"-"+j2
-                        input.className="option"+c
-                        input.name="option"+i2
-                        input.type="radio"
-                        input.disabled=true
+                        var textarea=document.createElement("textarea");
+                        // var input=document.createElement("input");
+                        // var label=document.createElement("label");
+                        // input.id="option"+i2+"-"+j2
+                        // input.className="option"+c
+                        // input.name="option"+i2
+                        // input.type="radio"
+                        // input.disabled=true
                         if(j2==answerChecked){
                             input.checked=true
                             if(j2==questions[i].answer.options){

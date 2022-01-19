@@ -188,12 +188,12 @@ $(document).ready(function(){
                 // console.log(time)
                 var quiz_title =$(this).parent().parent().parent().children(".head-quiz-box").text()
                 var quizId=0
-                var quiztype="تشریحی"
+                var quiztype="تستی"
                 for(var j=0;j<studentTestsArray.length;j++){
                     if(studentTestsArray[j].title==quiz_title){
                         quizId=studentTestsArray[j].id
-                        if(studentTestsArray[j].testordesc==false){
-                            quiztype="تستی"
+                        if(studentTestsArray[j].testordesc==true){
+                            quiztype="تشریحی"
                             
                         }
                     }

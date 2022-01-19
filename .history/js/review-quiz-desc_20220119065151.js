@@ -77,7 +77,7 @@ $(document).ready(function(){
                     for(var a=0;a<examsheet.answers.length;a++){
                         
                         if(examsheet.answers[a].questionId==questions[i].id){
-                            answerChecked=examsheet.answers[a].ResponseTest
+                            answerChecked=examsheet.answers[a].ResponseDesc
                             console.log(answerChecked)
                         }
                     }
@@ -87,13 +87,7 @@ $(document).ready(function(){
                     var ul1_li1=document.createElement("li");
                     var ul1_li2=document.createElement("li");
                     
-                    var ul3=document.createElement("ul");
-                    ul3.className="answer-option-unclicked"
-                    var ul3_li1=document.createElement("li");
-                    ul3_li1.className="q-num"
-                    var ul3_li1_text=document.createTextNode(i+1);
-                    ul3_li1.appendChild(ul3_li1_text)
-                    ul3.appendChild(ul3_li1)
+                    
 
                     divquestionbox.className="question-box"
                     ul1_li1.className="question-number"
@@ -111,13 +105,13 @@ $(document).ready(function(){
                         var i2=i+1
                         var j2=j+1
                         var li=document.createElement("li");
-                        var input=document.createElement("input");
-                        var label=document.createElement("label");
-                        input.id="option"+i2+"-"+j2
-                        input.className="option"+c
-                        input.name="option"+i2
-                        input.type="radio"
-                        input.disabled=true
+                        // var input=document.createElement("input");
+                        // var label=document.createElement("label");
+                        // input.id="option"+i2+"-"+j2
+                        // input.className="option"+c
+                        // input.name="option"+i2
+                        // input.type="radio"
+                        // input.disabled=true
                         if(j2==answerChecked){
                             input.checked=true
                             if(j2==questions[i].answer.options){

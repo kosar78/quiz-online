@@ -152,27 +152,17 @@ $(document).ready(function(){
                         div.classList="teacher-answer-for-review correct-answer"
                         var p_text = document.createTextNode("جواب شما صحیح است.");
                         p.appendChild(p_text)
-                        div.appendChild(p)
                     }
                     else if(red==true){
                         div.classList="teacher-answer-for-review incorrect-answer"
                         var p_text = document.createTextNode("جواب شما غلط است.");
                         p.appendChild(p_text)
                         var p1=document.createElement("p");
-                        var p1_text = document.createTextNode("جواب صحیح :");
-                        p1.appendChild(p1_text)
                         var p2=document.createElement("p");
-                        var p2_text = document.createTextNode(desc);
-                        p2.appendChild(p2_text)
-                        div.appendChild(p)
-                        div.appendChild(p1)
-                        div.appendChild(p2)
-                        
                     }
                     
                     divquestionbox.appendChild(ul1)
                     divquestionbox.appendChild(ul2)
-                    divquestionbox.appendChild(div)
                     $(".question-boxs-father").append(divquestionbox)
                     // $(".answer-form").append(ul3)
 

@@ -252,7 +252,7 @@ $(document).ready(function () {
       var a = 0;
       var answoptions = "";
       var ResponseTime = 0;
-      var Score = 0;
+      var Score = 1;
       var face = $(".typing-q-textarea" + i2).val();
       var desc = $(".typing-a-textarea" + i2).val();
       var count = $(".new-q" + i2).children(".q-options").children().length;

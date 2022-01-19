@@ -70,10 +70,6 @@ $(document).ready(function(){
                 var c=1
                 for(var i=0;i<questions.length;i++){
                     var answerChecked=0
-                    var green=false
-                    var red=false
-                    var desc=""
-                    var currectOption
                     for(var a=0;a<examsheet.answers.length;a++){
                         
                         if(examsheet.answers[a].questionId==questions[i].id){
@@ -120,13 +116,8 @@ $(document).ready(function(){
                         input.disabled=true
                         if(j2==answerChecked){
                             input.checked=true
-                            if(j2==questions[i].answer.options){
-                                green=true
-                            }
-                            else{
-                                red=true
-                                desc=questions[i].answer.desc
-                                currectOption=questions[i].answer.options
+                            if(j2==questions[i].answer.option){
+                                
                             }
                         }
                         label.setAttribute("for","option"+i2+"-"+j2)
@@ -145,34 +136,8 @@ $(document).ready(function(){
                         ul2.appendChild(li)
 
                     }
-                    var div=document.createElement("div");
-                    var p=document.createElement("p");
-                    p.className="message-for-view"
-                    if(green==true){
-                        div.classList="teacher-answer-for-review correct-answer"
-                        var p_text = document.createTextNode("جواب شما صحیح است.");
-                        p.appendChild(p_text)
-                        div.appendChild(p)
-                    }
-                    else if(red==true){
-                        div.classList="teacher-answer-for-review incorrect-answer"
-                        var p_text = document.createTextNode("جواب شما غلط است.");
-                        p.appendChild(p_text)
-                        var p1=document.createElement("p");
-                        var p1_text = document.createTextNode("جواب صحیح :");
-                        p1.appendChild(p1_text)
-                        var p2=document.createElement("p");
-                        var p2_text = document.createTextNode(desc);
-                        p2.appendChild(p2_text)
-                        div.appendChild(p)
-                        div.appendChild(p1)
-                        div.appendChild(p2)
-                        
-                    }
-                    
                     divquestionbox.appendChild(ul1)
                     divquestionbox.appendChild(ul2)
-                    divquestionbox.appendChild(div)
                     $(".question-boxs-father").append(divquestionbox)
                     // $(".answer-form").append(ul3)
 
